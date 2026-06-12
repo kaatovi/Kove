@@ -35,11 +35,12 @@ export default function Hero(){
                 transition={{duration:0.5, delay:0.3}}
                 className="flex flex-wrap gap-4"
             >
-                <a href="#projects" className="px-6 py-3 rounded-xl bg-green-600 hover:bg-green-500 text-white font-medium transition-colors">
+                <a href="#projects" className="px-6 py-3 rounded-xl bg-green-600 duration-200 hover:bg-transparent border border-transparent hover:border-green-400/30 text-white font-bold transition-colors">
                 View Projects
                 </a>
-                <a href="#contact" className="px-6 py-3 rounded-xl border border-white/15 hover:border-white/30 text-white/70 hover:text-white font-medium trasnition-all">
-                Contact Me
+                <a href="#contact" className="relative overflow-hidden px-6 py-3 rounded-xl border border-white/35 hover:border-white/50 text-white/70 hover:text-white font-bold transition-all group">
+                <span className="relative z-10">Contact Me</span>
+                <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-500 ease-in-out bg-gradient-to-r from-trasnparent via-white/20 to-transparent skew-x-12"/>
                 </a>
             </motion.div>
         </section>

@@ -18,7 +18,7 @@ export default function FloatingBackground () {
       style={{position: "fixed", inset:0, zIndex:0, overflow:"hidden"}}>
       <motion.div
         animate={{
-          x: [0,200,-40,0],
+          x: [0,250,-40,0],
           y: [0,-80,40,0],
           scale: [1,1.1,0.9,1],
         }}
@@ -41,7 +41,7 @@ export default function FloatingBackground () {
 
       <motion.div
         animate={{
-          x: [0,-200,60,0],
+          x: [0,-250,60,0],
           y: [0,100,-30,0],
           scale: [1,0.9,1.2,1],
         }}
