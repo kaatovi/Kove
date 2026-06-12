@@ -1,5 +1,6 @@
 import Hero from "@/components/Hero";
 import Projects from "@/components/Projects"
+import About from "@/components/About";
 import FloatingBackground from "@/components/FloatingBackground";
 
 export default function Home() {
@@ -9,6 +10,7 @@ export default function Home() {
         <div style={{position: "relative", zIndex: 1, padding: "2rem"}}>
           <Hero />
           <Projects />
+          <About />
         </div>
       </main>
   );

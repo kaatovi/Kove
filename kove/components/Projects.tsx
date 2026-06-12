@@ -72,10 +72,10 @@ export default function Projects() {
                         animate="center"
                         exit="exit"
                         transition={{duration: 0.35, ease: "easeIn"}}
-                        className={`rounded-2xl border p-8 min-h-[280px] flex flex-col gap-4 ${
+                        className={`rounded-2xl border p-8 flex flex-col gap-4 ${
                             project.isEmpty
-                                ?"border-white/5 bg-white/2 border-dashed"
-                                :"border-white/ bg-white/3"
+                                ?"border-white/50 bg-black/30 border-dashed min-h-[280px]"
+                                :"border-white/50 bg-black/30 min-h-auto"
                         }`}
                     >
 
@@ -88,7 +88,7 @@ export default function Projects() {
                             </div>
                         ) : (
                             <>
-                            <h3 className="text-white font-semibold text-2xl">{project.title}</h3>
+                            <h3 className="text-white font-semibold text-4xl">{project.title}</h3>
                             <p className="text-white/50 text-sm leading-relaxed max-w-xl">
                                 {project.description}
                             </p>
@@ -132,13 +132,13 @@ export default function Projects() {
                     <div className="flex gap-2">
                         <button
                             onClick={prev}
-                            className="w-10 h-10 rounded-xl border border-white/10 hover:border-green-500/50 text-white/50 hover:text-white transition-all flex items-center justify-center"
+                            className="w-10 h-10 rounded-xl border bg-green-600 border-transparent duration-200 hover:bg-transparent hover:border-green-500/50 text-white/70 hover:text-white transition-all flex items-center justify-center"
                         >
                             ←
                         </button>
                         <button
                             onClick={next}
-                            className="w-10 h-10 rounded-xl border border-white/10 hover:border-green-500/50 text-white/50 hover:text-white transition-all flex items-center justify-center"
+                            className="w-10 h-10 rounded-xl bg-green-600 border border-transparent duration-200 hover:bg-transparent hover:border-green-500/50 text-white/70 hover:text-white transition-all flex items-center justify-center"
                         >
                             →
                         </button>
