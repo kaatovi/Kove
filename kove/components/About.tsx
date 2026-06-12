@@ -31,21 +31,24 @@ export default function About() {
                         whileInView={{opacity: 1, y:0}}
                         viewport={{once: true}}
                         transition={{duration: 0.5, delay: i * 0.1}}
-                        className="transition-transform duration-300 ease-in-out hover:scale-105 rounded-2xl border border-white/8 bg-black/30 p-6"
+                        className="relative overflow-hidden transition-transform duration-300 ease-in-out hover:scale-105 rounded-2xl border border-white/8 bg-black/30 p-6 group"
                     >
-                        <p className="text-white/70 text-xs font-medium tracking-widest uppercase mb-4">
-                            {group.label}
-                        </p>
-                        <div className="flex flex-wrap gap-2">
-                            {group.items.map((skill) => (
-                                <span
-                                    key={skill}
-                                    className="text-sm px-3 py-1.5 rounded-lg bg-green-600/15 text-green-300"
-                                >
-                                {skill}
-                                </span>
-                            ))}
-                        </div>
+                        <span className="relative z-10">
+                            <p className="text-white/70 text-xs font-medium tracking-widest uppercase mb-4">
+                                {group.label}
+                            </p>
+                            <div className="flex flex-wrap gap-2">
+                                {group.items.map((skill) => (
+                                    <span
+                                        key={skill}
+                                        className="text-sm px-3 py-1.5 rounded-lg bg-green-600/15 text-green-300"
+                                    >
+                                    {skill}
+                                    </span>
+                                ))}
+                            </div>
+                        </span>
+                        <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-500 ease-in-out bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12"/>
                     </motion.div>
                 ))}
             </div>
