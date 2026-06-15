@@ -40,7 +40,7 @@ export default function Hero(){
                 </a>
                 <a href="#contact" className="relative overflow-hidden px-6 py-3 rounded-xl border border-white/35 hover:border-white/50 text-white/70 hover:text-white font-bold transition-all group">
                 <span className="relative z-10">Contact Me</span>
-                <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-500 ease-in-out bg-gradient-to-r from-trasnparent via-white/20 to-transparent skew-x-12"/>
+                <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-500 ease-in-out bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12"/>
                 </a>
             </motion.div>
         </section>
