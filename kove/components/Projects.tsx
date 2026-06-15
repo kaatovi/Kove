@@ -83,7 +83,7 @@ export default function Projects() {
                         transition={{duration: 0.35, ease: "easeIn"}}
                         className={`rounded-2xl border p-4 flex flex-col gap-4 ${
                             project.isEmpty
-                                ?"border-white/50 bg-black/30 border-dashed min-h-[280px]"
+                                ?"border-white/50 bg-black/30 border-dashed min-h-70"
                                 :"border-white/50 bg-black/30 min-h-auto"
                         }`}
                     >
@@ -98,7 +98,7 @@ export default function Projects() {
                         ) : (
                             <>
                                 <div className="flex flex-row gap-3 w-full">
-                                    <div className="w-160 h-80 rounded-xl overflow-hidden border border-white/10 flex-shrink-0">
+                                    <div className="w-160 h-80 rounded-xl overflow-hidden border border-white/10 shrink-0">
                                         <AnimatePresence mode="wait">
                                         <motion.img
                                             key={hoveredImage ?? project.images[0]}
@@ -125,7 +125,7 @@ export default function Projects() {
                                                         key={i}
                                                         onMouseEnter={() => setHoveredImage(img)}
                                                         onMouseLeave={() => setHoveredImage(null)}
-                                                        className={`w-25 h-15 rounded-lg overflow-hidden border cursor-pointer flex-shrink-0 transition-all duration-150 ${
+                                                        className={`w-25 h-15 rounded-lg overflow-hidden border cursor-pointer shrink-0 transition-all duration-150 ${
                                                             (hoveredImage ?? project.images[0]) === img
                                                                 ? "border-green-400/60 scale-105"
                                                                 : "border-white/10 opacity-60 hover:opacity-100"

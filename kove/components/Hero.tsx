@@ -18,7 +18,7 @@ export default function Hero(){
                 animate={{opacity:1, y:0}}
                 transition={{duration:0.5, delay:0.1}}
                 className="text-5xl md:text-7xl font-bold text-white leading-tight mb-6"
-                > Hi, I`m <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-300 to-yellow-300">kaatov</span>
+                > Hi, I`m <span className="text-transparent bg-clip-text bg-linear-to-r from-green-300 to-yellow-300">kaatov</span>
             </motion.p>
 
             <motion.p
@@ -40,7 +40,7 @@ export default function Hero(){
                 </a>
                 <a href="#contact" className="relative overflow-hidden px-6 py-3 rounded-xl border border-white/35 hover:border-white/50 text-white/70 hover:text-white font-bold transition-all group">
                 <span className="relative z-10">Contact Me</span>
-                <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-500 ease-in-out bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12"/>
+                <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-500 ease-in-out bg-linear-to-r from-transparent via-white/20 to-transparent skew-x-12"/>
                 </a>
             </motion.div>
         </section>

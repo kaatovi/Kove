@@ -48,7 +48,7 @@ export default function About() {
                                 ))}
                             </div>
                         </span>
-                        <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-500 ease-in-out bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12"/>
+                        <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-500 ease-in-out bg-linear-to-r from-transparent via-white/20 to-transparent skew-x-12"/>
                     </motion.div>
                 ))}
             </div>
