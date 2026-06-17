@@ -52,7 +52,7 @@ export default function Contact() {
                         aria-label="View GitHub Profile"
                     >
                         <img src="/github.svg" alt="" width={36} height={36} className="invert hover:scale-120 duration-200" />
-                    </a>
+                    </a>   
                     <a href="https://www.linkedin.com/in/ktav"
                         target="_blank"
                         rel="noopener noreferrer"

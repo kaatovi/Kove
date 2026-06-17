@@ -1,0 +1,43 @@
+{
+    "name": "Kurt Timothy Aston Valdecanas",
+    "title": "Full-Stack JavaScript Developer",
+    "location": "Bataan, Philippines",
+    "email": "ktav3316@gmail.com",
+    "github": "https://github.com/kaatovi",
+    "linkedin": "https://www.linkedin.com/in/ktav/",
+    "availability": "Open to full-time roles",
+    "about": "Loves building practical and scalable products using React, Next.JS, and Node.JS",
+    "skills": {
+        "frontend": ["React", "Next.js", "TypeScript", "Framer Motion", "Tailwind CSS"],
+        "backend": ["Node.js", "Express", "REST APIs", "PostgreSQL"],
+        "tools": ["Git", "GitHub", "Docker", "Vercel", "Figma"]
+    },
+    "projects": [
+        {
+            "title": "Kove",
+            "description": "An animated Next.js portfolio with a GPT-4o chat widget trained on specialized parameters based on user specification",
+            "tech": ["Next.js", "TypeScript", "Framer Motion", "OpenAI"],
+            "github": "https://github.com/kaatovi/Kove"
+        }
+    ],
+    "experience": [
+        {
+            "company": "NSPIRE, Inc.",
+            "role": ["C# Developer", "System Analyst"],
+            "specification": "Intern",
+            "dates": "Jan 2026 - April 2026",
+            "achievements": [
+                "Designed and optimized mutliple business report automations for the Philippine Orthopedic Center using DevExpress and C# to improve data visualization and operational efficiency.",
+                "Built and maintained report functionalities with proactive quality checks, identifying repetitive manual processes and streamlining them through reusable report components.",
+                "Practiced version control (Git) and cross-functional collaboration with business teams to translate operational requirements into technical solutions."
+            ]    
+        }
+    ],
+    "education": [
+        {
+            "degree": "BS Computer Science Major in Software Development",
+            "institution": "Bataan Peninsula State University - Main Campus",
+            "year": "August 2022 - July 2026"
+        }
+    ]
+}
