@@ -15,8 +15,8 @@
     "projects": [
         {
             "title": "Kove",
-            "description": "An animated Next.js portfolio with a GPT-4o chat widget trained on specialized parameters based on user specification",
-            "tech": ["Next.js", "TypeScript", "Framer Motion", "OpenAI"],
+            "description": "An animated Next.js portfolio with a Groq chat widget trained on specialized parameters based on user specification",
+            "tech": ["Next.js", "TypeScript", "Framer Motion", "Groq"],
             "github": "https://github.com/kaatovi/Kove"
         }
     ],

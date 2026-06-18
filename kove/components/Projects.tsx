@@ -7,7 +7,7 @@ const PROJECTS = [
     {
         title: "Kove",
         description:
-        "An animated Next.js portfolio with a GPT-4o chat widget (TBA) trained on my resume",
+        "An animated Next.js portfolio with a Groq (Llama 3.3) chat widget trained on my resume",
         images: [
             "/Screenshots/Hero.png",
             "/Screenshots/Projects.png",

@@ -33,7 +33,7 @@ export const RESUME_CONTEXT = `
 
     == EXPERIENCE ==
     ${resume.experience.map(e => `
-        ${e.company} - ${e.role} (${e.dates})
+        ${e.company} - ${Array.isArray(e.role) ? e.role.join(" & ") : e.role} (${e.specification ? e.specification + ", " : ""} ${e.dates}))
         ${e.achievements.map(a => `- ${a}`).join("\n")}
         `).join("")}
 

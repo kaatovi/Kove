@@ -3,6 +3,7 @@ import Projects from "@/components/Projects"
 import About from "@/components/About";
 import Contact from "@/components/Contact";
 import FloatingBackground from "@/components/FloatingBackground";
+import Trademark from "@/components/Trademark";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
           <Projects />
           <About />
           <Contact />
+          <Trademark />
         </div>
       </main>
   );
