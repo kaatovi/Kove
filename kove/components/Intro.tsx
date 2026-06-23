@@ -22,15 +22,7 @@ export default function Intro({onEnter}: introProps) {
                 <div className="w-24 h-24 rounded-2xl bg-green-600/20 border border-green-500/30 flex items-center justify-center">
                     <span className="text-green-400 text-3xl font-bold">K</span>
                 </div>
-
-                <div className="flex flex-col items-center gap-2">
-                    <p className="text-white/30 text-xs tracking-widest uppercase">
-                        Portfolio
-                    </p>
-                    <h1 className="text-white text-4xl font-bold tracking-tight">
-                        kaatov
-                    </h1>
-                </div>
+            
 
                 <motion.button
                     onClick={onEnter}
