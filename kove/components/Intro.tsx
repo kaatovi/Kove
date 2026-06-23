@@ -19,11 +19,6 @@ export default function Intro({onEnter}: introProps) {
                 transition={{duration:0.6, ease: "easeOut"}}
                 className="flex flex-col items-center gap-10"
             >
-                <div className="w-24 h-24 rounded-2xl bg-green-600/20 border border-green-500/30 flex items-center justify-center">
-                    <span className="text-green-400 text-3xl font-bold">K</span>
-                </div>
-            
-
                 <motion.button
                     onClick={onEnter}
                     initial={{opacity:0}}
@@ -31,9 +26,9 @@ export default function Intro({onEnter}: introProps) {
                     transition={{delay:0.4, duration:0.5}}
                     whileHover={{scale:1.05}}
                     whileTap={{scale:0.95}}
-                    className="px-8 py-3 rounded-xl border border-white/15 text-white/60 hover:text-white hover:border-green-500/50 text-sm font-bold transition-all"
+                    className="w-24 h-24 rounded-2xl bg-green-600/20 border border-green-500/30 flex items-center justify-center"
                 >
-                    Press Start
+                    <span className="text-green-400 text-3xl font-bold">K</span>
                 </motion.button>
 
                 <motion.div
