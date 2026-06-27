@@ -2,7 +2,6 @@
 
 import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import next from "next";
 import Image from "next/image";
 
 type Message = {role: "user" | "assistant"; content: string};
@@ -93,15 +92,13 @@ export default function ChatWidget() {
                         style={{maxHeight: "480px"}}
                     >
                         <div className="flex items-center gap-1.5 px-3 py-3 border-b border-white/10 bg-black/40">
-                            <div className="w-8 h-8 rounded-full bg-black/40 border flex items-center justify-center text-white text-xs font-bold">
                                 <Image 
-                                    src="/Screenshots/koveBNW.png"
+                                    src="/koveB&W.png"
                                     alt="KA"
-                                    width="24"
-                                    height="24"
+                                    width="30"
+                                    height="30"
                                     className="invert"
                                 />
-                            </div>
                             <p className="text-white text-sm font-medium leading-none py-2">
                                 Kaatov`s Assistant <span className="text-transparent bg-clip-text bg-linear-to-r from-green-300 to-yellow-300">v.0.1.0</span>
                             </p>

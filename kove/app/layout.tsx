@@ -17,6 +17,12 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Kove",
   description: "Portfolio Showcase",
+  icons: {
+    icon:[ 
+      {url: "/koveIconDark.png", media:"(prefers-color-scheme:light"},
+      {url: "/koveIconWhite.png", media:"(prefers-color-scheme:dark)"},  
+      ],  
+    },    
 };
 
 export default function RootLayout({

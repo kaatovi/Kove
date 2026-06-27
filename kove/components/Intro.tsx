@@ -49,7 +49,7 @@ export default function Intro({onEnter}: introProps) {
                     className="w-48 h-48 flex items-center justify-center ease-out"
                 >
                     <Image
-                        src="/Screenshots/koveColored.png"
+                        src="/koveColor.png"
                         alt="Kove Logo"
                         width={200}
                         height={200}    

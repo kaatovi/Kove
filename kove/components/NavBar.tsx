@@ -6,11 +6,11 @@ export default function NavBar() {
             
             <span className="flex flex-row items-center text-white font-bold text-lg tracking-tight">
                 <Image 
-                src="/Screenshots/koveBNW.png"
+                src="/koveB&W.png"
                 alt="Kove Logo"
-                width={48}
-                height={48}
-                className="invert"
+                width={40}
+                height={40}
+                className="invert mr-1"
             />
                 Kove<span className="text-green-400">.</span> <span className="text-xs text-white/40 pl-1">v.0.1.0</span>
             </span>
