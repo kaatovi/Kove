@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 const PROJECTS = [
     {
@@ -59,7 +60,7 @@ export default function Projects() {
     const project = PROJECTS[current];
 
     return (
-        <section id="projects" className="px-6 md:px-16 lg:px-24 py-24">
+        <section id="projects" className="px-6 md:px-16 lg:px-24 py-28">
             <motion.p 
                 initial={{opacity:0, y:20}}
                 whileInView={{opacity:1, y:0}}
@@ -74,7 +75,7 @@ export default function Projects() {
                 whileInView={{opacity:1, y:0}}
                 transition={{duration:0.6}}
                 
-                className="text-4xl md:text-5xl font-bold mb-12"
+                className="text-4xl md:text-5xl font-bold mb-8"
             >
                 Projects
             </motion.h2>
@@ -177,7 +178,12 @@ export default function Projects() {
                                                 className="pt-2 w-fit self-end"
                                                 aria-label="View on GitHub"
                                             >
-                                                <img src="/github.svg" alt="" width={36} height={36} className="invert hover:scale-120 duration-200" />
+                                                <Image 
+                                                    src="/github.svg" 
+                                                    alt="" 
+                                                    width={36} 
+                                                    height={36} 
+                                                    className="invert hover:scale-120 duration-200" />
                                             </a>
                                         )}
                                     </div>

@@ -1,10 +1,11 @@
 "use client";
 
 import {motion} from "framer-motion";
+import Image from "next/image";
 
 export default function Contact() {
     return(
-        <section id = "contact" className="px-6 md:px-16 lg:px-24 py-24">
+        <section id = "contact" className="px-6 md:px-16 lg:px-24 py-28">
             <motion.p
                 initial={{opacity:0, y:30}}
                 whileInView={{opacity:1, y:0}}
@@ -43,7 +44,12 @@ export default function Contact() {
                         className="w-fit"
                         aria-label="Send Email"
                     >
-                        <img src="/email.svg" alt="" width={36} height={36} className="invert hover:scale-120 duration-200" />
+                        <Image 
+                            src="/email.svg" 
+                            alt="" 
+                            width={36} 
+                            height={36} 
+                            className="invert hover:scale-120 duration-200" />
                     </a>
                     <a href ="https://github.com/kaatovi"
                         target="_blank"
@@ -51,7 +57,12 @@ export default function Contact() {
                         className="w-fit"
                         aria-label="View GitHub Profile"
                     >
-                        <img src="/github.svg" alt="" width={36} height={36} className="invert hover:scale-120 duration-200" />
+                        <Image 
+                            src="/github.svg"
+                            alt=""
+                            width={36}
+                            height={36} 
+                            className="invert hover:scale-120 duration-200" />
                     </a>   
                     <a href="https://www.linkedin.com/in/ktav"
                         target="_blank"
@@ -59,7 +70,12 @@ export default function Contact() {
                         className="w-fit"
                         aria-label="View LinkedIn Profile"
                     >
-                        <img src="linkedin.svg" alt="" width="36" height={36} className="invert hover:scale-120 duration-200"/>
+                        <Image 
+                            src="linkedin.svg" 
+                            alt="" 
+                            width="36" 
+                            height={36} 
+                            className="invert hover:scale-120 duration-200"/>
                     </a>
             </motion.div>
 

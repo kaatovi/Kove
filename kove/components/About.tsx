@@ -10,7 +10,7 @@ const SKILLS = [
 
 export default function About() {
     return(
-        <section id="about" className="px-6 md:px-16 lg:px-24 py-24">
+        <section id="about" className="px-6 md:px-16 lg:px-24 py-28">
             <motion.p 
                 initial={{opacity:0, y:20}}
                 whileInView={{opacity:1, y:0}}
