@@ -60,14 +60,31 @@ export default function Projects() {
 
     return (
         <section id="projects" className="px-6 md:px-16 lg:px-24 py-24">
-            <p className="text-green-400 text-sm font-medium tracking-widest uppercase mb-3">
+            <motion.p 
+                initial={{opacity:0, y:20}}
+                whileInView={{opacity:1, y:0}}
+                transition={{duration:0.5}}
+                
+                className="text-green-400 text-sm font-medium tracking-widest uppercase mb-3"
+            >
                 Personal
-            </p>
-            <h2 className="text-4xl md:text-5xl font-bold mb-12">
+            </motion.p>
+            <motion.h2 
+                initial={{opacity:0, y:20}}
+                whileInView={{opacity:1, y:0}}
+                transition={{duration:0.6}}
+                
+                className="text-4xl md:text-5xl font-bold mb-12"
+            >
                 Projects
-            </h2>
+            </motion.h2>
             
-            <div className="relative overflow-hidden">
+            <motion.div  
+                initial={{opacity:0, y:80}}
+                whileInView={{opacity:1, y:0}}
+                transition={{duration:0.8}}
+                className="relative overflow-hidden"
+            >
                 <AnimatePresence mode="wait" custom={direction}>
                     <motion.div
                         key={current}
@@ -80,7 +97,7 @@ export default function Projects() {
                         initial="enter"
                         animate="center"
                         exit="exit"
-                        transition={{duration: 0.35, ease: "easeIn"}}
+                        whileInView={{duration: 0.8, ease: "easeIn"}}
                         className={`rounded-2xl border p-4 flex flex-col gap-4 ${
                             project.isEmpty
                                 ?"border-white/50 bg-black/30 border-dashed min-h-70"
@@ -199,7 +216,7 @@ export default function Projects() {
                         </button>
                     </div>
                 </div>
-            </div>
+            </motion.div>
         </section>
     );
 }

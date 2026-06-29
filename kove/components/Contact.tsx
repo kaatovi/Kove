@@ -7,7 +7,7 @@ export default function Contact() {
         <section id = "contact" className="px-6 md:px-16 lg:px-24 py-24">
             <motion.p
                 initial={{opacity:0, y:30}}
-                animate={{opacity:1, y:0}}
+                whileInView={{opacity:1, y:0}}
                 transition={{duration:0.5}}
                 className="text-green-400 text-sm font-medium tracking-widest uppercase mb-3"
             >
@@ -16,7 +16,7 @@ export default function Contact() {
 
             <motion.h2
                 initial={{opacity:0, y:30}}
-                animate={{opacity:1, y:0}}
+                whileInView={{opacity:1, y:0}}
                 transition={{duration:0.5, delay:0.1}}
                 className="text-4xl md:text-5xl font-bold mb-6"
             >
@@ -25,7 +25,7 @@ export default function Contact() {
 
             <motion.p
                 initial={{opacity:0, y:30}}
-                animate={{opacity:1, y:0}}
+                whileInView={{opacity:1, y:0}}
                 transition={{duration:0.5, delay:0.2}}
                 className="text-white/50 text-lg leading-relaxed max-w-xl mb-10 text-justify"
             >
@@ -35,7 +35,7 @@ export default function Contact() {
            
             <motion.div
                 initial={{opacity:0, y:30}}
-                animate={{opacity:1, y:0}}
+                whileInView={{opacity:1, y:0}}
                 transition={{duration:0.5, delay:0.3}}
                 className="flex flex-wrap gap-4"
             > 
