@@ -14,7 +14,7 @@ export default function Home() {
   const[entered, setEntered] = useState(false);
   
   return (
-      <main style={{minHeight: "100vh", position:"relative", background: "#1A1A1A"}}> 
+      <main style={{minHeight: "100vh", position:"relative", background: "#080808"}}> 
         <AnimatePresence>
           {!entered && (
             <Intro onEnter={() => setEntered(true)} />

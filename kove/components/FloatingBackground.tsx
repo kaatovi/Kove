@@ -66,7 +66,7 @@ export default function FloatingBackground () {
         style={{
             position: "absolute",
             inset: 0,
-            backgroundImage: "radial-gradient(rgba(255,255,255,0.07) 1px, transparent 1px)",
+            backgroundImage: "radial-gradient(rgba(255,255,255,0.13) 1px, transparent 1px)",
             backgroundSize: "28px 28px",
         }}      
       />
