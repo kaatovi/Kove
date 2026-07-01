@@ -46,7 +46,7 @@ export default function Intro({onEnter}: introProps) {
                     animate={{opacity:1}}
                     whileHover={{scale:1.2}}
                     whileTap={{scale:0.95}}
-                    className="w-48 h-48 flex items-center justify-center ease-out"
+                    className="w-24 h-24 md:w-48 md:h-48 flex items-center justify-center ease-out"
                 >
                     <Image
                         src="/koveColor.png"

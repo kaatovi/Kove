@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function Contact() {
     return(
-        <section id = "contact" className="px-6 md:px-16 lg:px-24 py-28">
+        <section id = "contact" className="px-6 sm:px-14 lg:px-24 py-28">
             <motion.p
                 initial={{opacity:0, y:30}}
                 whileInView={{opacity:1, y:0}}

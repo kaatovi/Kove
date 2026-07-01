@@ -60,7 +60,7 @@ export default function Projects() {
     const project = PROJECTS[current];
 
     return (
-        <section id="projects" className="px-6 md:px-16 lg:px-24 py-28">
+        <section id="projects" className="px-6 sm:px-14 lg:px-24 py-28">
             <motion.p 
                 initial={{opacity:0, y:20}}
                 whileInView={{opacity:1, y:0}}
@@ -115,8 +115,8 @@ export default function Projects() {
                             </div>
                         ) : (
                             <>
-                                <div className="flex flex-row gap-3 w-full">
-                                    <div className="w-160 h-80 rounded-xl overflow-hidden border border-white/10 shrink-0">
+                                <div className="flex flex-col xl:flex-row gap-3 w-full">
+                                    <div className="w-auto h-auto xl:w-160 xl:h-80 rounded-xl overflow-hidden border border-white/10 shrink-0">
                                         <AnimatePresence mode="wait">
                                         <motion.img
                                             key={hoveredImage ?? project.images[0]}
@@ -130,9 +130,9 @@ export default function Projects() {
                                         />
                                         </AnimatePresence>
                                     </div>
-                                    <div className="flex flex-col gap-4 flex-1">
-                                        <h3 className="text-white font-semibold text-4xl">{project.title}</h3>
-                                        <p className="text-white/50 text-sm leading-relaxed max-w-xl">
+                                    <div className="flex flex-col gap-2 lg:gap-4 flex-1">
+                                        <h3 className="text-white font-semibold text-3xl lg:text-4xl">{project.title}</h3>
+                                        <p className="text-white/50 text-sm leading-relaxed max-w-xl text-justify">
                                             {project.description}
                                         </p>
                                     
@@ -143,7 +143,7 @@ export default function Projects() {
                                                         key={i}
                                                         onMouseEnter={() => setHoveredImage(img)}
                                                         onMouseLeave={() => setHoveredImage(null)}
-                                                        className={`w-25 h-15 rounded-lg overflow-hidden border cursor-pointer shrink-0 transition-all duration-150 ${
+                                                        className={`w-20 h-10 sm:w-25 sm:h-15 rounded-lg overflow-hidden border cursor-pointer shrink-0 transition-all duration-150 ${
                                                             (hoveredImage ?? project.images[0]) === img
                                                                 ? "border-green-400/60 scale-105"
                                                                 : "border-white/10 opacity-60 hover:opacity-100"

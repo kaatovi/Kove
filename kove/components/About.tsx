@@ -10,7 +10,7 @@ const SKILLS = [
 
 export default function About() {
     return(
-        <section id="about" className="px-6 md:px-16 lg:px-24 py-28">
+        <section id="about" className="px-6 sm:px-14 lg:px-24 py-28">
             <motion.p 
                 initial={{opacity:0, y:20}}
                 whileInView={{opacity:1, y:0}}
@@ -46,7 +46,7 @@ export default function About() {
                 whileInView={{opacity:1, y:0}}
                 
                 transition={{duration:0.8}}
-                className="grid md:grid-cols-3 gap-8"
+                className="grid sm:grid-cols-3 gap-8"
             >
                 {SKILLS.map((group, i) => (
                     <motion.div
