@@ -30,12 +30,12 @@ export default function Intro({onEnter}: introProps) {
     useEffect(() => {
         const timer = setTimeout(() => {
             setParticles(
-                Array.from({length:20}, (_, i) => ({
+                Array.from({length:40}, (_, i) => ({
                     id: i,
                     x: Math.random() * 100,
-                    size: Math.random() * 12 + 6,
-                    duration: Math.random() * 4 + 4,
-                    delay: Math.random() * 5,
+                    size: Math.random() * 12 + 10,
+                    duration: Math.random() * 2 + 2,
+                    delay: Math.random() * 10,
                 }))
             );
         }, 0);
@@ -71,9 +71,9 @@ export default function Intro({onEnter}: introProps) {
                     key={`particle-${index}`}
                     initial={{y:0, opacity:0, scale:1}}
                     animate={{
-                        y:[0, -800],
-                        opacity:[0.8,0.4,0],
-                        scale:[0.3, 1.2, 1],
+                        y:[25, -225],
+                        opacity:[1,0.5,0],
+                        scale:[1.2, 0.5, 0],
                     }}
                     transition={{
                         duration: p.duration,
@@ -147,7 +147,7 @@ export default function Intro({onEnter}: introProps) {
                 {rippling && (
                     <motion.div
                         initial={{scale:0, opacity:1}}
-                        animate={{scale:8, opacity:0}}
+                        animate={{scale:6, opacity:0}}
                         transition={{duration:1, ease:"easeInOut"}}
                         onAnimationComplete={onEnter}
                         className="absolute w-64 h-64 rounded-full bg-green-500/30 pointer-events-none"
