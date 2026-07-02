@@ -173,7 +173,7 @@ export default function Intro({onEnter}: introProps) {
                     }}
                 >
                     <Image
-                        src="/koveColor.png"
+                        src="/koveColored.png"
                         alt="Kove Logo"
                         width={200}
                         height={200}    

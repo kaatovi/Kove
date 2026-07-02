@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   icons: {
     icon:[ 
       {url: "/koveIconDark.png", media:"(prefers-color-scheme:light"},
-      {url: "/koveIconWhite.png", media:"(prefers-color-scheme:dark)"},  
+      {url: "/koveIconLight.png", media:"(prefers-color-scheme:dark)"},  
       ],  
     },    
 };

@@ -6,7 +6,7 @@ export default function NavBar() {
             
             <div className="flex flex-row items-center px-0 sm:px-5 md:px-0 lg:px-10">
                 <Image 
-                src="/koveB&W.png"
+                src="/koveBNW.png"
                 alt="Kove Logo"
                 width={40}
                 height={40}

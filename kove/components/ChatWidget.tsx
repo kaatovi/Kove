@@ -93,7 +93,7 @@ export default function ChatWidget() {
                     >
                         <div className="flex items-center gap-1.5 px-3 py-3 border-b border-white/10 bg-black/40">
                                 <Image 
-                                    src="/koveB&W.png"
+                                    src="/koveBNW.png"
                                     alt="KA"
                                     width="30"
                                     height="30"
