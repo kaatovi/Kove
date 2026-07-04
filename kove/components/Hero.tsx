@@ -9,8 +9,8 @@ export default function Hero(){
                 initial={{opacity:0, y:20}} 
                 whileInView={{opacity:1, y:0}} 
                 transition={{duration:0.5}}
-                className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full w-fit border border-green-500/30 bg-green-500/10 text-green-400 text-xs tracking-widest uppercase"
-                ><span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse"></span>Full-Stack JavaScript Developer
+                className="inline-flex items-center gap-2 px-3 py-1.5 border-b  w-fit text-green-400 text-xs tracking-widest uppercase"
+                >Full-Stack JavaScript Developer
             </motion.p>
 
             <motion.p

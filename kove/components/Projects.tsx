@@ -10,9 +10,9 @@ const PROJECTS = [
         description:
         "An animated Next.js portfolio with a Groq (Llama 3.3) chat widget trained on my resume",
         images: [
-            "/Screenshots/Hero.png",
-            "/Screenshots/Projects.png",
-            "/Screenshots/About.png",
+            "/Screenshots/koveSC1.png",
+            "/Screenshots/koveSC2.png",
+            "/Screenshots/koveSC3.png",
         ],
         tags: ["Next.js", "Framer Motion", "OpenAI", "TypeScript"],
         githubUrl: "https://github.com/kaatovi/Kove",
