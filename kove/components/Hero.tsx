@@ -25,7 +25,7 @@ export default function Hero(){
                 initial={{opacity:0, y:20}}
                 whileInView={{opacity:1, y:0}}
                 transition={{duration:0.5, delay:0.2}}
-                className="text-white/50 text-sm md:text-lg md:text-xl leading-relaxed mb-6 max-w-xl"
+                className="text-white/50 text-sm md:text-lg leading-relaxed mb-6 max-w-xl"
                 >I build practical to nonsensical web apps using React, Next.js and Node.js.
             </motion.p>
 
