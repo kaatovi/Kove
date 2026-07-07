@@ -55,7 +55,7 @@ export default function About() {
                         whileInView={{opacity: 1, y:0}}
 
                         transition={{duration: 0.4, delay: i * 0.1}}
-                        className="relative overflow-hidden transition-transform duration-300 ease-in-out hover:scale-105 rounded-2xl border border-white/8 bg-black/30 p-6 group"
+                        className="relative overflow-hidden transition-transform duration-300 ease-in-out hover:scale-105 rounded-2xl border border-white/8 backdrop-blur-lg bg-black/30 p-6 group"
                     >
                         <span className="relative z-10">
                             <p className="text-white/70 text-xs font-medium tracking-widest uppercase mb-4">

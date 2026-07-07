@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import TextType from "@/components/TextType";
 
 export default function Hero(){
     return (
@@ -18,7 +19,22 @@ export default function Hero(){
                 whileInView={{opacity:1, y:0}}
                 transition={{duration:0.5, delay:0.1}}
                 className="text-5xl md:text-7xl font-bold text-white leading-tight"
-                > Hi, I`m <span className="text-transparent bg-clip-text bg-linear-to-r from-green-300 to-yellow-300">kaatov</span>
+                > Hi, I`m <span className="text-transparent bg-clip-text bg-linear-to-r from-green-300 to-yellow-300">
+                    <TextType 
+                        text={["Kurt.", "kaatov.", "kurval."]}
+                        typingSpeed={150}
+                        pauseDuration={1500}
+                        showCursor
+                        cursorCharacter="▎"
+                        texts={["Welcome to React Bits! Good to see you!","Build some amazing experiences!"]}
+                        cursorClassName="text-green-300"
+                        deletingSpeed={150}
+                        variableSpeedEnabled={false}
+                        variableSpeedMin={60}
+                        variableSpeedMax={120}
+                        cursorBlinkDuration={0.5}    
+                    />
+                </span>
             </motion.p>
 
             <motion.p

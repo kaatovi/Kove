@@ -101,8 +101,8 @@ export default function Projects() {
                         whileInView={{duration: 0.8, ease: "easeIn"}}
                         className={`rounded-2xl border p-4 flex flex-col gap-4 ${
                             project.isEmpty
-                                ?"border-white/50 bg-black/30 border-dashed min-h-70"
-                                :"border-white/50 bg-black/30 min-h-auto"
+                                ?"backdrop-blur-lg border-white/50 bg-black/30 border-dashed min-h-70"
+                                :"backdrop-blur-lg border-white/50 bg-black/30 min-h-auto"
                         }`}
                     >
 
