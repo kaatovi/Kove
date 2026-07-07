@@ -14,7 +14,7 @@ export default function Hero(){
                 >Full-Stack JavaScript Developer
             </motion.p>
 
-            <motion.p
+            <motion.div
                 initial={{opacity:0, y:20}}
                 whileInView={{opacity:1, y:0}}
                 transition={{duration:0.5, delay:0.1}}
@@ -35,7 +35,7 @@ export default function Hero(){
                         cursorBlinkDuration={0.5}    
                     />
                 </span>
-            </motion.p>
+            </motion.div>
 
             <motion.p
                 initial={{opacity:0, y:20}}
