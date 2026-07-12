@@ -29,9 +29,9 @@ export default function Hero(){
                         texts={["Welcome to React Bits! Good to see you!","Build some amazing experiences!"]}
                         cursorClassName="text-green-300"
                         deletingSpeed={150}
-                        variableSpeedEnabled={false}
-                        variableSpeedMin={60}
-                        variableSpeedMax={120}
+                        variablespeedenabled="false"
+                        variablespeedmin={60}
+                        variablespeedmax={120}
                         cursorBlinkDuration={0.5}    
                     />
                 </span>
