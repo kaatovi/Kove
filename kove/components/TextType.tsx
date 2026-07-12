@@ -173,7 +173,6 @@ const TextType = ({
   return createElement(
     Component,
     {
-      
       className: `inline-block whitespace-pre-wrap tracking-tight ${className}`,
       ...props
     },
