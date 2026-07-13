@@ -98,7 +98,7 @@ export default function Projects() {
                         initial="enter"
                         animate="center"
                         exit="exit"
-                        whileInView={{duration: 0.8, ease: "easeIn"}}
+                        transition={{duration: 0.8, ease: "easeIn"}}
                         className={`rounded-2xl border p-4 flex flex-col gap-4 ${
                             project.isEmpty
                                 ?"backdrop-blur-lg border-white/50 bg-black/30 border-dashed min-h-70"
