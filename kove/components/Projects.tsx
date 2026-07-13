@@ -119,8 +119,8 @@ export default function Projects() {
                                     <div className="w-auto h-auto xl:w-160 xl:h-80 rounded-xl overflow-hidden border border-white/10 shrink-0">
                                         <AnimatePresence mode="wait">
                                         <motion.img
-                                            key={hoveredImage ?? project.images[0]}
-                                            src={hoveredImage ?? project.images[0]}
+                                            key={hoveredImage ?? project.images?.[0]}
+                                            src={hoveredImage ?? project.images?.[0]}
                                             alt="Preview"
                                             initial={{opacity:0}}
                                             animate={{opacity:1}}
