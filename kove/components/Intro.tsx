@@ -26,6 +26,7 @@ export default function Intro({onEnter}: introProps) {
     const [rippling, setRippling] = useState(false);
     const [particles, setParticles] = useState<Particle[]>([]);
     const [ripples, setRipples] = useState<Ripple[]>([]);
+    const [waveDurations, setWaveDurations] = useState<number[]>([]);
     const idRef = useRef(0);
 
     useEffect(() => {
@@ -41,6 +42,13 @@ export default function Intro({onEnter}: introProps) {
             );
         }, 0);
         return() => clearTimeout(timer);
+    }, []);
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setWaveDurations(Array.from({length: 8}, () => Math.random() * 1.5));
+    }, 0);
+        return () => clearTimeout(timer);
     }, []);
 
     function handleClick() {
@@ -104,7 +112,7 @@ export default function Intro({onEnter}: introProps) {
                         scaleY: [1, 2, 1, 3, 1, 2, 1],
                     }}
                     transition={{
-                        duration: 2 + Math.random() * 1.5,
+                        duration: waveDurations[i] ?? 2,
                         repeat: Infinity,
                         ease: "easeInOut",
                         delay: i * 0.9,
