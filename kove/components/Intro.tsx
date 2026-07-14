@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { motion } from "framer-motion";
 import { AnimatePresence } from "framer-motion";
 import Image from "next/image";
@@ -26,6 +26,7 @@ export default function Intro({onEnter}: introProps) {
     const [rippling, setRippling] = useState(false);
     const [particles, setParticles] = useState<Particle[]>([]);
     const [ripples, setRipples] = useState<Ripple[]>([]);
+    const idRef = useRef(0);
 
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -47,7 +48,7 @@ export default function Intro({onEnter}: introProps) {
     }
 
     function handleBubbleStart(x: number) {
-        const id = Date.now() + Math.random();
+        const id = idRef.current++;
         setRipples(prev => [...prev, {id, x}]);
         setTimeout(() => {
             setRipples(prev => prev.filter(r => r.id !== id));
