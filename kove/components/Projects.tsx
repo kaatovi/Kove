@@ -60,13 +60,13 @@ export default function Projects() {
     const project = PROJECTS[current];
 
     return (
-        <section id="projects" className="px-6 sm:px-14 lg:px-24 py-28">
+        <section id="projects" className="px-6 sm:px-14 lg:px-24 py-35">
             <motion.p 
                 initial={{opacity:0, y:20}}
                 whileInView={{opacity:1, y:0}}
                 transition={{duration:0.5}}
                 
-                className="text-green-400 text-sm font-medium tracking-widest uppercase mb-3"
+                className="text-green-400 text-[10px] font-normal tracking-widest uppercase mb-3"
             >
                 Personal
             </motion.p>
@@ -98,7 +98,7 @@ export default function Projects() {
                         initial="enter"
                         animate="center"
                         exit="exit"
-                        transition={{duration: 0.8, ease: "easeIn"}}
+                        transition={{duration: 0.5, ease: "easeIn"}}
                         className={`rounded-2xl border p-4 flex flex-col gap-4 ${
                             project.isEmpty
                                 ?"backdrop-blur-lg border-white/50 bg-black/30 border-dashed min-h-70"

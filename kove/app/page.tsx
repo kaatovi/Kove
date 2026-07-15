@@ -26,8 +26,8 @@ export default function Home() {
               <FloatingBackground />
               <div style={{position:"relative", zIndex:1}}>
                 <Hero />
-                <Projects />
                 <About />
+                <Projects />
                 <Contact />
                 <Trademark />
               </div>

@@ -5,12 +5,12 @@ import Image from "next/image";
 
 export default function Contact() {
     return(
-        <section id = "contact" className="px-6 sm:px-14 lg:px-24 py-28">
+        <section id = "contact" className="px-6 sm:px-14 lg:px-24 py-35">
             <motion.p
                 initial={{opacity:0, y:30}}
                 whileInView={{opacity:1, y:0}}
                 transition={{duration:0.5}}
-                className="text-green-400 text-sm font-medium tracking-widest uppercase mb-3"
+                className="text-green-400 text-[10px] font-normal tracking-widest uppercase mb-3"
             >
                 Contact
             </motion.p>

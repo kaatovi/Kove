@@ -1,22 +1,61 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const SKILLS = [
-    {label: "Frontend", items: ["React", "Next.js", "TypeScript", "Framer Motion", "Tailwind CSS"] },
-    {label: "Backend", items: ["Node.js", "Express", "REST APIs", "PostgreSQL"]},
-    {label: "Tools", items: ["Git", "GitHub", "Figma", "Vercel", "Procreate"]}, 
+    {
+        label: "Frontend", 
+        items: [
+            {name: "React", icon: "/Frontend/react.svg"}, 
+            {name: "Next.js", icon: "/Frontend/next.svg"}, 
+            {name: "Framer Motion", icon: "/Frontend/framer.svg"}, 
+            {name: "Tailwind CSS", icon: "/Frontend/tailwind.svg"}
+        ] },
+    {
+        label: "Backend",
+        items: [
+            {name: "Node.js", icon: "/Backend/node.svg"},
+            {name: "Express", icon: "/Backend/express.svg"},
+            {name: "REST APIs", icon: "/Backend/rest.svg"}
+        ]
+    },
+    {
+        label: "Databases",
+        items: [
+            {name: "PostgreSQL", icon: "/Databases/postgre.svg"},
+            {name: "MySQL", icon: "/Databases/mysql.svg"}
+        ]
+    },
+    {
+        label: "Languages",
+        items: [
+            {name: "JavaScript", icon: "/Languages/javascript.svg"},
+            {name: "TypeScript", icon: "/Languages/typescript.svg"},
+            {name: "PHP", icon: "/Languages/php.svg"}
+        ]
+    },
+    {
+        label: "Tools",
+        items: [
+            {name: "Git", icon: "/Tools/git.svg"},
+            {name: "GitHub", icon: "/github.svg"},
+            {name: "Figma", icon: "/Tools/figma.svg"},
+            {name: "Vercel", icon: "/Tools/vercel.svg"},
+            {name: "Procreate", icon: "/Tools/procreate.svg"}
+        ]
+    }
 ];
 
 export default function About() {
     return(
-        <section id="about" className="px-6 sm:px-14 lg:px-24 py-28">
+        <section id="about" className="px-6 sm:px-14 lg:px-24 py-35">
             <motion.p 
                 initial={{opacity:0, y:20}}
                 whileInView={{opacity:1, y:0}}
                 
                 transition={{duration:0.5}}
-                className="text-green-400 text-sm font-medium tracking-widest uppercase mb-3"
+                className="text-green-400 text-[10px] font-normal tracking-widest uppercase mb-3"
             >
                 About
             </motion.p>
@@ -34,9 +73,9 @@ export default function About() {
                 whileInView={{opacity:1, y:0}}
                 
                 transition={{duration:0.7}}    
-                className="text-white/50 text-lg text-justify max-w-xl leading-relaxed mb-8"
+                className="text-white/70 text-sm md:text-xl font-light text-justify max-w-xl leading-relaxed mb-8"
             >
-                I`m an aspiring full-stack JavaScript developer based in Bataan, Philippines.
+                I`m an aspiring full-stack developer based in Bataan, Philippines.
                 I enjoy building scalable products that solve personal and/or real problems.
                 I also dabble on creative projects on the side.
             </motion.p>
@@ -46,7 +85,7 @@ export default function About() {
                 whileInView={{opacity:1, y:0}}
                 
                 transition={{duration:0.8}}
-                className="grid sm:grid-cols-3 gap-8"
+                className="grid gap-6 w-full"
             >
                 {SKILLS.map((group, i) => (
                     <motion.div
@@ -54,20 +93,27 @@ export default function About() {
                         initial={{opacity: 0, y:30}}
                         whileInView={{opacity: 1, y:0}}
 
-                        transition={{duration: 0.4, delay: i * 0.1}}
-                        className="relative overflow-hidden transition-transform duration-300 ease-in-out hover:scale-105 rounded-2xl border border-white/8 backdrop-blur-lg bg-black/30 p-6 group"
+                        transition={{duration: 0.2, delay: i * 0.05}}
+                        className="relative overflow-hidden transition-transform duration-300 ease-in-out border-y border-white/8 backdrop-blur-lg bg-black/50 p-6 group -mx-23.5"
                     >
-                        <span className="relative z-10">
-                            <p className="text-white/70 text-xs font-medium tracking-widest uppercase mb-4">
-                                {group.label}
-                            </p>
-                            <div className="flex flex-wrap gap-2">
+                        <span className="relative z-10 flex flex-row">
+                            <div className="flex flex-row gap-2 w-full items-center justify-center">
+                                <p className="text-green-400 text-2xl font-extrabold tracking-widest lowercase my-2 mr-10">
+                                    {group.label}
+                                </p>
                                 {group.items.map((skill) => (
                                     <span
-                                        key={skill}
-                                        className="text-sm px-3 py-1.5 rounded-lg bg-green-600/15 text-green-300"
+                                        key={skill.name}
+                                        className="text-sm px-3 py-1.5 font-extralight"
                                     >
-                                    {skill}
+                                        <Image 
+                                            src={skill.icon}
+                                            alt={skill.name}
+                                            width={34}
+                                            height={34}
+                                            className="inline-block mr-2 invert" 
+                                        />
+                                    {skill.name}
                                     </span>
                                 ))}
                             </div>
