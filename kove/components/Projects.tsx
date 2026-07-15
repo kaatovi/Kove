@@ -60,7 +60,7 @@ export default function Projects() {
     const project = PROJECTS[current];
 
     return (
-        <section id="projects" className="px-6 sm:px-14 lg:px-24 py-35">
+        <section id="projects" className="px-6 sm:px-14 lg:px-24 py-25 bg-black/50">
             <motion.p 
                 initial={{opacity:0, y:20}}
                 whileInView={{opacity:1, y:0}}
@@ -68,7 +68,7 @@ export default function Projects() {
                 
                 className="text-green-400 text-[10px] font-normal tracking-widest uppercase mb-3"
             >
-                Personal
+                Highlighted
             </motion.p>
             <motion.h2 
                 initial={{opacity:0, y:20}}

@@ -11,7 +11,7 @@ export default function Hero(){
                 whileInView={{opacity:1, y:0}}
                 transition={{duration:0.5, delay:0.1}}
                 className="text-5xl md:text-7xl font-bold text-white leading-tight"
-                > Hi, I`m <span className="text-transparent bg-clip-text bg-linear-to-r from-green-300 to-yellow-300">
+                > Hi, I&apos;m <span className="text-transparent bg-clip-text bg-linear-to-r from-green-300 to-yellow-300">
                     <TextType 
                         text={["Kurt.", "kaatov.", "kurval."]}
                         typingSpeed={150}
@@ -20,7 +20,7 @@ export default function Hero(){
                         cursorCharacter="| "
                         cursorClassName="text-green-300"
                         deletingSpeed={150}
-                        cursorBlinkDuration={0.5}    
+                        cursorBlinkDuration={.8}    
                     />
                 </span>
             </motion.div>

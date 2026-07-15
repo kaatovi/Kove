@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function Contact() {
     return(
-        <section id = "contact" className="px-6 sm:px-14 lg:px-24 py-35">
+        <section id = "contact" className="px-6 sm:px-14 lg:px-24 py-25 border-b border-white/30 bg-black/50">
             <motion.p
                 initial={{opacity:0, y:30}}
                 whileInView={{opacity:1, y:0}}
@@ -21,16 +21,16 @@ export default function Contact() {
                 transition={{duration:0.5, delay:0.1}}
                 className="text-4xl md:text-5xl font-bold mb-6"
             >
-                Let`s work together
+                Let&apos;s work together
             </motion.h2>
 
             <motion.p
                 initial={{opacity:0, y:30}}
                 whileInView={{opacity:1, y:0}}
                 transition={{duration:0.5, delay:0.2}}
-                className="text-white/50 text-lg leading-relaxed max-w-xl mb-10 text-justify"
+                className="text-white/60 text-lg font-light leading-relaxed max-w-xl mb-10 text-justify"
             >
-                Open to full-time developer roles and interesting freelance projects.
+                Open to full-time developer roles and freelance projects.
                 Feel free to reach out or use the AI chat widget to ask me anything instantly.
             </motion.p>
            
