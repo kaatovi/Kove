@@ -14,7 +14,7 @@ const PROJECTS = [
             "/Screenshots/koveSC2.png",
             "/Screenshots/koveSC3.png",
         ],
-        tags: ["Next.js", "Framer Motion", "GroqAPI", "TypeScript"],
+        tags: ["Next.js", "Framer Motion", "GroqAPI", "TypeScript", "Tailwind CSS", "Git"],
         githubUrl: "https://github.com/kaatovi/Kove",
         isEmpty: false,
     },
@@ -98,8 +98,6 @@ export default function Projects() {
             transition: {
                 duration: 10,
                 ease: "linear",
-                repeat: Infinity,
-                repeatType: "loop",
             }
         });
     }, [controls, project.images]);
@@ -228,7 +226,7 @@ export default function Projects() {
                                                     >
                                                         {project.images.map((img, i) => (
                                                             <div 
-                                                                key={`a-${i}`} className={`w-60 h-35 rounded-lg overflow-hidden border border-white/10 shrink-0 duration-300 transtition-all${
+                                                                key={`a-${i}`} className={`w-60 h-35 rounded-lg overflow-hidden shrink-0 duration-300 transtition-all${
                                                                     (hoveredImage ?? project.images[0]) === img
                                                                         ? "border-green-400/60 scale-105"
                                                                         : "border-white/10 opacity-60 hover:opacity-100"
@@ -241,9 +239,9 @@ export default function Projects() {
                                                         ))}
                                                         {project.images.map((img, i) => (
                                                             <div 
-                                                                key={`b-${i}`} className={`w-60 h-35 rounded-lg overflow-hidden border border-white/10 shrink-0 duration-300 transition-all ${
+                                                                key={`b-${i}`} className={`w-60 h-35 rounded-lg overflow-hidden shrink-0 duration-300 transition-all ${
                                                                     (hoveredImage ?? project.images[0]) === img
-                                                                        ? "border-green-400/60 scale-105"
+                                                                        ? "scale-105"
                                                                         : "border-white/10 opacity-60 hover:opacity-100"
                                                                 }`}
                                                                 onMouseEnter={() => setHoveredImage(img)}
