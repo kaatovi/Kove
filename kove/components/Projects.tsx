@@ -1,20 +1,20 @@
 "use client";
 
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { useState, useEffect, useRef } from "react";
+import { motion, AnimatePresence, useAnimation, useMotionValue } from "framer-motion";
 import Image from "next/image";
 
 const PROJECTS = [
     {
         title: "Kove",
         description:
-        "An animated Next.js portfolio with a Groq (Llama 3.3) chat widget trained on my resume",
+        "An animated Next.js portfolio with a Groq (Llama 3.3) chat widget specifically trained on Kurt's stack and experiences",
         images: [
             "/Screenshots/koveSC1.png",
             "/Screenshots/koveSC2.png",
             "/Screenshots/koveSC3.png",
         ],
-        tags: ["Next.js", "Framer Motion", "OpenAI", "TypeScript"],
+        tags: ["Next.js", "Framer Motion", "GroqAPI", "TypeScript"],
         githubUrl: "https://github.com/kaatovi/Kove",
         isEmpty: false,
     },
@@ -35,6 +35,32 @@ const PROJECTS = [
         isEmpty: true,
     },
 ];
+
+const TAG_COLORS: Record<string, string> = {
+    "Next.js": "#86efac",
+    "React": "#86efac",
+    "Framer Motion": "#86efac",
+    "Tailwind CSS": "#86efac",
+
+    "Node.js": "#f87171",
+    "Express": "#f87171",
+    "Rest APIs": "#f87171",
+
+    "PostgreSQL": "#60a5fa",
+    "MySQL": "#60a5fa",
+
+    "JavaScript": "#facc15",
+    "TypeScript": "#facc15",
+    "PHP": "#facc15",
+
+    "Git": "#a78bfa",
+    "GitHub": "#a78bfa",
+    "Figma": "#a78bfa",
+    "Vercel": "#a78bfa",
+    "Procreate": "#a78bfa",
+
+    "GroqAPI": "#f9a8d4",
+}
 
 export default function Projects() {
     const [current, setCurrent] = useState(0);
@@ -58,6 +84,25 @@ export default function Projects() {
     }
 
     const project = PROJECTS[current];
+    const controls = useAnimation();
+    const trackRef = useRef<HTMLDivElement>(null);
+    const x = useMotionValue(0);
+
+       useEffect(() => {
+        if (!trackRef.current) return;
+
+        const totalWidth = trackRef.current.scrollWidth / 2;
+
+        controls.start({
+            x: -totalWidth,
+            transition: {
+                duration: 10,
+                ease: "linear",
+                repeat: Infinity,
+                repeatType: "loop",
+            }
+        });
+    }, [controls, project.images]);
 
     return (
         <section id="projects" className="px-6 sm:px-14 lg:px-24 py-25 bg-black/50">
@@ -130,62 +175,115 @@ export default function Projects() {
                                         />
                                         </AnimatePresence>
                                     </div>
-                                    <div className="flex flex-col gap-2 lg:gap-4 flex-1">
-                                        <h3 className="text-white font-semibold text-3xl lg:text-4xl">{project.title}</h3>
-                                        <p className="text-white/50 text-sm leading-relaxed max-w-xl text-justify">
+                                    <div className="flex flex-col gap-2 lg:gap-2 flex-1">
+                                        <h3 className="text-white font-semibold text-4xl lg:text-5xl mt-3">{project.title}</h3>
+                                        <p className="text-white/60 text-sm leading-relaxed max-w-xl text-justify">
                                             {project.description}
                                         </p>
                                     
                                         {project.images &&  project.images.length > 0 && (
-                                            <div className="flex gap-3">
-                                                {project.images.map((img, i) => (
-                                                    <div
-                                                        key={i}
-                                                        onMouseEnter={() => setHoveredImage(img)}
-                                                        onMouseLeave={() => setHoveredImage(null)}
-                                                        className={`w-20 h-10 sm:w-25 sm:h-15 rounded-lg overflow-hidden border cursor-pointer shrink-0 transition-all duration-150 ${
-                                                            (hoveredImage ?? project.images[0]) === img
-                                                                ? "border-green-400/60 scale-105"
-                                                                : "border-white/10 opacity-60 hover:opacity-100"
-                                                        }`}
+                                            <div 
+                                                className="relative overflow-hidden lg:w-160"
+                                                style={{
+                                                    maskImage: "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
+                                                    WebkitMaskImage: "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
+                                                }}
+                                                onMouseEnter={() => controls.stop()}
+                                                onMouseLeave={() => {
+                                                    if (!trackRef.current) return;
+                                                    const totalWidth = trackRef.current.scrollWidth/2;
+                                                    const currentX = x.get();
+                                                    const remaining = Math.abs(currentX) % totalWidth;
+                                                    const distanceLeft = totalWidth - remaining;
+                                                    const remainingRatio = (totalWidth - remaining) / totalWidth;
+
+                                                    controls.start({
+                                                        x: currentX - distanceLeft,
+                                                        transition: {
+                                                            duration: 10 * remainingRatio, 
+                                                            ease: "linear", 
+                                                            repeatDelay: 0,
+                                                        }
+                                                    }).then(() => {
+                                                        x.set(0);
+                                                        controls.start({
+                                                            x: -totalWidth,
+                                                            transition: {
+                                                                duration: 10,
+                                                                ease: "linear",
+                                                                repeat: Infinity,
+                                                                repeatType: "loop",
+                                                                repeatDelay: 0,
+                                                            }
+                                                        });
+                                                    });
+                                                }}
+                                                >
+                                                    <motion.div
+                                                        ref={trackRef}
+                                                        className="flex gap-3 w-max"
+                                                        animate={controls}
+                                                        style={{x}}
+                                                        initial={{x:0}}
                                                     >
-                                                        <img
-                                                            src={img}
-                                                            alt={`Screenshot ${i + 1}`}
-                                                            className="w-full h-full object-cover"
-                                                        />
-                                                    </div>
-                                                ))}
-                                            
+                                                        {project.images.map((img, i) => (
+                                                            <div 
+                                                                key={`a-${i}`} className={`w-60 h-35 rounded-lg overflow-hidden border border-white/10 shrink-0 duration-300 transtition-all${
+                                                                    (hoveredImage ?? project.images[0]) === img
+                                                                        ? "border-green-400/60 scale-105"
+                                                                        : "border-white/10 opacity-60 hover:opacity-100"
+                                                                }`}
+                                                                onMouseEnter={() => setHoveredImage(img)}
+                                                                onMouseLeave={() => setHoveredImage(null)}
+                                                                >
+                                                                <img src={img} alt={`Screenshot ${i + 1}`} className="w-full h-full object-cover" />
+                                                            </div>
+                                                        ))}
+                                                        {project.images.map((img, i) => (
+                                                            <div 
+                                                                key={`b-${i}`} className={`w-60 h-35 rounded-lg overflow-hidden border border-white/10 shrink-0 duration-300 transition-all ${
+                                                                    (hoveredImage ?? project.images[0]) === img
+                                                                        ? "border-green-400/60 scale-105"
+                                                                        : "border-white/10 opacity-60 hover:opacity-100"
+                                                                }`}
+                                                                onMouseEnter={() => setHoveredImage(img)}
+                                                                onMouseLeave={() => setHoveredImage(null)}
+                                                            >
+                                                                <img src={img} alt={`Screenshot ${i + 1}`} className="w-full h-full object-cover" />
+                                                            </div>
+                                                        ))}
+                                                    </motion.div>
                                             </div>
                                         )}
+                                        <div className="flex flex-row mt-auto justify-between">
+                                            <div className="flex flex-wrap gap-1 mt-auto">
+                                                {project.tags.map((tag) => (
+                                                    <span
+                                                        key={tag}
+                                                        className="text-sm px-2.5 py-1 rounded-lg font-medium border"
+                                                        style={{color: `${TAG_COLORS[tag] ? "#ffffff" : "#000000"}cc`, borderColor: TAG_COLORS[tag] ?? "#ffffff20"}}
+                                                    >
+                                                        {tag}
+                                                    </span>
+                                                ))}
+                                            </div>
 
-                                        <div className="flex flex-wrap gap-1 mt-auto">
-                                            {project.tags.map((tag) => (
-                                                <span
-                                                    key={tag}
-                                                    className="text-sm px-2.5 py-1 rounded-lg bg-green-600/15 text-green-300 font-medium"
+                                            {project.githubUrl && (
+                                                <a href={project.githubUrl}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="pt-2 w-fit self-end"
+                                                    aria-label="View on GitHub"
                                                 >
-                                                    {tag}
-                                                </span>
-                                            ))}
+                                                    <Image 
+                                                        src="/github.svg" 
+                                                        alt="" 
+                                                        width={36} 
+                                                        height={36} 
+                                                        className="invert hover:scale-120 duration-200" />
+                                                </a>
+                                            )}
                                         </div>
-
-                                        {project.githubUrl && (
-                                            <a href={project.githubUrl}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="pt-2 w-fit self-end"
-                                                aria-label="View on GitHub"
-                                            >
-                                                <Image 
-                                                    src="/github.svg" 
-                                                    alt="" 
-                                                    width={36} 
-                                                    height={36} 
-                                                    className="invert hover:scale-120 duration-200" />
-                                            </a>
-                                        )}
                                     </div>
                                 </div>
                             </>

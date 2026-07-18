@@ -6,6 +6,7 @@ import Image from "next/image";
 const SKILLS = [
     {
         label: "Frontend", 
+        color: "#86efac",
         items: [
             {name: "React", icon: "/Frontend/react.svg"}, 
             {name: "Next.js", icon: "/Frontend/next.svg"}, 
@@ -14,6 +15,7 @@ const SKILLS = [
         ] },
     {
         label: "Backend",
+        color: "#f87171",
         items: [
             {name: "Node.js", icon: "/Backend/node.svg"},
             {name: "Express", icon: "/Backend/express.svg"},
@@ -22,6 +24,7 @@ const SKILLS = [
     },
     {
         label: "Databases",
+        color: "#60a5fa",
         items: [
             {name: "PostgreSQL", icon: "/Databases/postgre.svg"},
             {name: "MySQL", icon: "/Databases/mysql.svg"}
@@ -29,6 +32,7 @@ const SKILLS = [
     },
     {
         label: "Languages",
+        color: "#facc15",
         items: [
             {name: "JavaScript", icon: "/Languages/javascript.svg"},
             {name: "TypeScript", icon: "/Languages/typescript.svg"},
@@ -37,6 +41,7 @@ const SKILLS = [
     },
     {
         label: "Tools",
+        color: "#a78bfa",
         items: [
             {name: "Git", icon: "/Tools/git.svg"},
             {name: "GitHub", icon: "/github.svg"},
@@ -99,7 +104,9 @@ export default function About() {
                     >
                         <span className="relative z-10 flex flex-row">
                             <div className="flex flex-row gap-2 w-full items-center justify-center">
-                                <p className="text-green-400 text-2xl font-light tracking-widest lowercase my-1 mr-10">
+                                <p className="text-2xl font-light tracking-widest lowercase my-1 mr-10"
+                                    style={{color: group.color}}
+                                >
                                     {group.label}
                                 </p>
                                 {group.items.map((skill) => (
