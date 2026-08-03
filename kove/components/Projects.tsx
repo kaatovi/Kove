@@ -158,7 +158,7 @@ export default function Projects() {
                             </div>
                         ) : (
                             <>
-                                <div className="flex flex-col xl:flex-row gap-3 w-full">
+                                <div className="flex flex-col xl:flex-row gap-3">
                                     <div className="w-auto h-auto xl:w-160 xl:h-80 rounded-xl overflow-hidden border border-white/10 shrink-0">
                                         <AnimatePresence mode="wait">
                                         <motion.img
@@ -175,16 +175,16 @@ export default function Projects() {
                                     </div>
                                     <div className="flex flex-col gap-2 lg:gap-2 flex-1">
                                         <h3 className="text-white font-semibold text-4xl lg:text-5xl mt-3">{project.title}</h3>
-                                        <p className="text-white/60 text-sm leading-relaxed max-w-xl text-justify">
+                                        <p className="text-white/60 text-sm leading-relaxed w-fit text-justify">
                                             {project.description}
                                         </p>
                                     
                                         {project.images &&  project.images.length > 0 && (
                                             <div 
-                                                className="relative overflow-hidden w-fit"
+                                                className="relative overflow-hidden w-150"
                                                 style={{
-                                                    maskImage: "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
-                                                    WebkitMaskImage: "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
+                                                    maskImage: "linear-gradient(to right, transparent, black 5%, black 90%, transparent)",
+                                                    WebkitMaskImage: "linear-gradient(to right, transparent, black 5%, black 90%, transparent)",
                                                 }}
                                                 onMouseEnter={() => controls.stop()}
                                                 onMouseLeave={() => {
@@ -198,7 +198,7 @@ export default function Projects() {
                                                     controls.start({
                                                         x: currentX - distanceLeft,
                                                         transition: {
-                                                            duration: 10 * remainingRatio, 
+                                                            duration: 20 * remainingRatio, 
                                                             ease: "linear", 
                                                             repeatDelay: 0,
                                                         }
@@ -207,7 +207,7 @@ export default function Projects() {
                                                         controls.start({
                                                             x: -totalWidth,
                                                             transition: {
-                                                                duration: 10,
+                                                                duration: 20,
                                                                 ease: "linear",
                                                                 repeat: Infinity,
                                                                 repeatType: "loop",
@@ -266,7 +266,7 @@ export default function Projects() {
                                                     </motion.div>
                                             </div>
                                         )}
-                                        <div className="flex flex-row mt-auto justify-between">
+                                        <div className="flex flex-row mt-auto justify-between w-full">
                                             <div className="flex flex-wrap gap-1 mt-auto">
                                                 {project.tags.map((tag) => (
                                                     <span
@@ -283,7 +283,7 @@ export default function Projects() {
                                                 <a href={project.githubUrl}
                                                     target="_blank"
                                                     rel="noopener noreferrer"
-                                                    className="pt-2 w-fit self-end"
+                                                    className="pt-2 self-end"
                                                     aria-label="View on GitHub"
                                                 >
                                                     <Image 
