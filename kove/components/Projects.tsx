@@ -96,7 +96,7 @@ export default function Projects() {
         controls.start({
             x: -totalWidth,
             transition: {
-                duration: 10,
+                duration: 30,
                 ease: "linear",
             }
         });
@@ -181,7 +181,7 @@ export default function Projects() {
                                     
                                         {project.images &&  project.images.length > 0 && (
                                             <div 
-                                                className="relative overflow-hidden lg:w-160"
+                                                className="relative overflow-hidden w-fit"
                                                 style={{
                                                     maskImage: "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
                                                     WebkitMaskImage: "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
@@ -234,6 +234,19 @@ export default function Projects() {
                                                                 onMouseEnter={() => setHoveredImage(img)}
                                                                 onMouseLeave={() => setHoveredImage(null)}
                                                                 >
+                                                                <img src={img} alt={`Screenshot ${i + 1}`} className="w-full h-full object-cover" />
+                                                            </div>
+                                                        ))}
+                                                        {project.images.map((img, i) => (
+                                                            <div 
+                                                                key={`b-${i}`} className={`w-60 h-35 rounded-lg overflow-hidden shrink-0 duration-300 transition-all ${
+                                                                    (hoveredImage ?? project.images[0]) === img
+                                                                        ? "scale-105"
+                                                                        : "border-white/10 opacity-60 hover:opacity-100"
+                                                                }`}
+                                                                onMouseEnter={() => setHoveredImage(img)}
+                                                                onMouseLeave={() => setHoveredImage(null)}
+                                                            >
                                                                 <img src={img} alt={`Screenshot ${i + 1}`} className="w-full h-full object-cover" />
                                                             </div>
                                                         ))}
