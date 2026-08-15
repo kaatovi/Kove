@@ -2,10 +2,12 @@
 
 import { motion } from "framer-motion";
 import TextType from "@/components/TextType";
+import Image from "next/image";
 
 export default function Hero(){
     return (
-        <section className="relative z-10 min-h-screen flex flex-col justify-center px-6 sm:px-14 lg:px-24">
+        <section className="flex flex-row gap-30">
+            <div className="relative justify-center px-6 sm:px-14 lg:px-24 flex flex-col z-10 min-h-screen">
             <motion.div
                 initial={{opacity:0, y:20}}
                 whileInView={{opacity:1, y:0}}
@@ -30,7 +32,7 @@ export default function Hero(){
                 whileInView={{opacity:1, y:0}}
                 transition={{duration:0.5, delay:0.2}}
                 className="text-white/70 text-sm md:text-xl leading-relaxed font-light mb-6 max-w-xl"
-                >Understanding the means to an end. System quality—building with security and functionality for long-term scalability.
+                >Understanding the means to an end. For system quality—building with security and functionality to long-term scalability.
             </motion.p>
 
             <motion.div
@@ -47,6 +49,25 @@ export default function Hero(){
                 <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-500 ease-in-out bg-linear-to-r from-transparent via-white/20 to-transparent skew-x-12"/>
                 </a>
             </motion.div>
+            </div>
+            <div className="relative self-center w-48 h-48 md:w-64 md:h-64 lg:w-124 lg:h-124 rounded-full overflow-hidden group">
+            <Image 
+                    src="/Kurt.jpg" 
+                    width={500} 
+                    height={500} 
+                    alt="Kurt" 
+                    className="w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0"
+                    style={{ objectPosition: "center 13%" }}
+            />
+            <Image 
+                src="/kurtDraw.jpg"
+                width={500}
+                height={500}
+                alt="Kurt Drawing"
+                className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+                style={{ objectPosition: "center 13%" }}
+            />
+            </div>
         </section>
     );
 }
