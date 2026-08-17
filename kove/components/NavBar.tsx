@@ -18,9 +18,21 @@ export default function NavBar() {
             </div>
 
             <div className="flex items-center gap-6 text-sm text-white/50 lg:px-10">
-                <a href="#projects" className="hover:text-white transition-colors">Projects</a>
-                <a href="#about" className="hover:text-white transition-colors">About</a>
-                <a href="#contact" className="hover:text-white transition-colors">Contact</a>
+                <a href="https://drive.google.com/file/d/1a9rhSStJh77P8v_6mDvFz5wvF2khCPnW/view?usp=sharing" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="relative text-md lowercase tracking-widest text-white transition-colors pb-1 after:absolute after:bottom-0 after:left-0 after:h-[1.5px] after:w-full after:bg-green-400 after:scale-x-30 after:origin-left hover:after:scale-x-100 after:transition-transform after:duration-300">
+                    Resume<span className="text-green-400">.</span>
+                </a>
+                <a href="#projects" className="relative text-md lowercase tracking-widest text-white transition-colors pb-1 after:absolute after:bottom-0 after:left-0 after:h-[1.5px] after:w-full after:bg-green-400 after:scale-x-30 after:origin-left hover:after:scale-x-100 after:transition-transform after:duration-300">
+                    Projects<span className="text-green-400">.</span>
+                </a>
+                <a href="#about" className="relative text-md lowercase tracking-widest text-white transition-colors pb-1 after:absolute after:bottom-0 after:left-0 after:h-[1.5px] after:w-full after:bg-green-400 after:scale-x-30 after:origin-left hover:after:scale-x-100 after:transition-transform after:duration-300">
+                    About<span className="text-green-400">.</span>
+                </a>
+                <a href="#contact" className="relative text-md lowercase tracking-widest text-white transition-colors pb-1 after:absolute after:bottom-0 after:left-0 after:h-[1.5px] after:w-full after:bg-green-400 after:scale-x-30 after:origin-left hover:after:scale-x-100 after:transition-transform after:duration-300">
+                    Contact<span className="text-green-400">.</span>
+                </a>
             </div>
         </nav>
     );

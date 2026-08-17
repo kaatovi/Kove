@@ -55,36 +55,84 @@ const SKILLS = [
 export default function About() {
     return(
         <section id="about" className="px-6 sm:px-14 lg:px-24 py-20 mt-25 border-t border-white/30 bg-black/50">
-            <div className="flex flex-col">
-            <motion.p 
-                initial={{opacity:0, y:20}}
-                whileInView={{opacity:1, y:0}}
-                
-                transition={{duration:0.5}}
-                className="text-green-400 text-[10px] font-normal tracking-widest uppercase mb-3"
-            >
-                About
-            </motion.p>
-            <motion.h2 
-                initial={{opacity:0, y:20}}
-                whileInView={{opacity:1, y:0}}
-                
-                transition={{duration:0.6}}
-                className="text-4xl md:text-5xl font-bold mb-4"
-            >
-                Personal & Stack
-            </motion.h2>
-            <motion.p 
-                initial={{opacity:0, y:20}}
-                whileInView={{opacity:1, y:0}}
-                
-                transition={{duration:0.7}}    
-                className="text-white/60 text-sm md:text-lg font-light text-justify max-w-xl leading-relaxed mb-6"
-            >
-                I&apos;m an aspiring full-stack developer based in Bataan, Philippines.
-                I enjoy building scalable products that solve personal and/or real problems, with strong focus on
-                clean architecture, maintainable code, and user experience.
-            </motion.p>
+            <div className="flex flex-row">
+                <div className="flex flex-col">
+                    <motion.p 
+                        initial={{opacity:0, y:20}}
+                        whileInView={{opacity:1, y:0}}
+                        
+                        transition={{duration:0.5}}
+                        className="text-green-400 text-[10px] font-normal tracking-widest uppercase mb-3"
+                    >
+                        About
+                    </motion.p>
+                    <motion.h2 
+                        initial={{opacity:0, y:20}}
+                        whileInView={{opacity:1, y:0}}
+                        
+                        transition={{duration:0.6}}
+                        className="text-4xl md:text-5xl font-bold mb-4"
+                    >
+                        Personal & Stack
+                    </motion.h2>
+                    <motion.p 
+                        initial={{opacity:0, y:20}}
+                        whileInView={{opacity:1, y:0}}
+                        
+                        transition={{duration:0.7}}    
+                        className="text-white/60 text-sm md:text-lg font-light text-justify max-w-xl leading-relaxed mb-6"
+                    >
+                        I&apos;m Kurt Valdecañas, an aspiring full-stack developer based in Bataan, Philippines.
+                        I specialize in the PERN stack to build scalable products that solve personal and/or real problems, with strong focus on
+                        clean architecture, maintainable code, and user experience.
+                    </motion.p>
+                </div>
+                <motion.div 
+                    initial={{opacity:0, y:20}}
+                    whileInView={{opacity:1, y:0}}
+                    transition={{duration:0.8}}
+                    className="grid grid-cols-4 gap-3 px-10 mb-10 items-center"
+                >
+                    <div className="flex flex-col gap-1 rounded-2xl bg-black/50 p-5 items-center">
+                        <h1 className="text-4xl font-bold text-white text-center">3</h1>
+                        <p className="text-md text-white/60 uppercase tracking-widest text-center">P<span className="text-xs text-white/40 text-center">rojects Done</span> </p>
+                    </div>
+
+                    <div className="flex flex-col gap-1 rounded-2xl bg-black/50 p-5 items-center">
+                        <h1 className="text-4xl font-bold text-green-400 text-center">PWA</h1>
+                        <p className="text-md text-white/60 uppercase tracking-widest text-center">E<span className="text-xs text-white/40 text-center">xpertise</span></p>
+                    </div>
+
+                    <div className="flex flex-col gap-1 rounded-2xl bg-black/50 p-5 items-center">
+                        <h1 className="text-lg font-semibold text-white text-center">Kove</h1>
+                        <p className="text-md text-white/60 uppercase tracking-widest text-center">R<span className="text-xs text-white/40 text-center">ecent Project</span></p>
+                    </div>  
+
+                    <div className="flex flex-col gap-1 rounded-2xl bg-black/50 p-5 items-center">
+                        <h1 className="text-lg font-semibold text-white/40 text-center">Finance App (TBD)</h1>
+                        <p className="text-md text-white/60 uppercase tracking-widest text-center">N<span className="text-xs text-white/40 text-center">ext Project</span></p>
+                    </div>
+
+                    <div className="flex flex-col gap-1 rounded-2xl bg-black/50 p-5 items-center">
+                        <h1 className="text-lg font-semibold text-white text-center">{"< "}1 yr</h1>
+                        <p className="text-md text-white/60 uppercase tracking-widest text-center">P<span className="text-xs text-white/40 text-center">rofessional Experience</span></p>
+                    </div>
+
+                    <div className="flex flex-col gap-1 rounded-2xl bg-black/50 p-5 items-center">
+                        <h1 className="text-lg font-bold text-white text-center">Bachelor&apos;s Degree</h1>
+                        <p className="text-md text-white/60 uppercase tracking-widest text-center">E<span className="text-xs text-white/40 text-center">ducational Attainment</span></p>
+                    </div>
+
+                    <div className="flex flex-col gap-1 rounded-2xl bg-black/50 p-5 items-center">
+                        <h1 className="text-lg font-semibold text-white text-center">Developer | System Analyst</h1>
+                        <p className="text-md text-white/60 uppercase tracking-widest text-center">R<span className="text-xs text-white/40 text-center">ecent Experience</span></p>
+                    </div>
+
+                    <div className="flex flex-col gap-1 rounded-2xl bg-black/50 p-5 items-center">
+                        <h1 className="text-lg font-semibold text-white text-center">IT & Developer Roles</h1>
+                        <p className="text-md text-white/60 uppercase tracking-widest text-center">N<span className="text-xs text-white/40 text-center">ext Goal</span></p>
+                    </div>
+                </motion.div>
             </div>
             <motion.div 
                 initial={{opacity:0, y:20}}

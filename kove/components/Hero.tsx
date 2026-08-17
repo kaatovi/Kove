@@ -32,7 +32,7 @@ export default function Hero(){
                 whileInView={{opacity:1, y:0}}
                 transition={{duration:0.5, delay:0.2}}
                 className="text-white/70 text-sm md:text-xl leading-relaxed font-light mb-6 max-w-xl"
-                >Understanding the means to an end. For system quality—building with security and functionality to long-term scalability.
+                >Understanding the means to an end. For system quality—building with security and reliability to long-term scalability.
             </motion.p>
 
             <motion.div
@@ -50,7 +50,11 @@ export default function Hero(){
                 </a>
             </motion.div>
             </div>
-            <div className="relative self-center w-48 h-48 md:w-64 md:h-64 lg:w-124 lg:h-124 rounded-full overflow-hidden group">
+            <motion.div 
+                initial={{opacity:0, y:20}}
+                whileInView={{opacity:1, y:0}}
+                transition={{duration:0.5, delay:0.1}}
+                className="relative self-center w-48 h-48 md:w-64 md:h-64 lg:w-124 lg:h-124 rounded-full overflow-hidden group">
             <Image 
                     src="/Kurt.jpg" 
                     width={500} 
@@ -67,7 +71,7 @@ export default function Hero(){
                 className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 group-hover:opacity-100"
                 style={{ objectPosition: "center 13%" }}
             />
-            </div>
+            </motion.div>
         </section>
     );
 }

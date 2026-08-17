@@ -10,24 +10,38 @@ const PROJECTS = [
         description:
         "An animated Next.js portfolio with a Groq (Llama 3.3) chat widget specifically trained on Kurt's stack and experiences",
         images: [
-            "/Screenshots/koveSC1.png",
-            "/Screenshots/koveSC2.png",
-            "/Screenshots/koveSC3.png",
+            "/Screenshots/KoveSC1.png",
+            "/Screenshots/KoveSC2.png",
+            "/Screenshots/KoveSC3.png",
+            "/Screenshots/KoveSC4.png",
         ],
         tags: ["Next.js", "Framer Motion", "GroqAPI", "TypeScript", "Tailwind CSS", "Git"],
         githubUrl: "https://github.com/kaatovi/Kove",
         isEmpty: false,
     },
     {
-        title: "Coming Soon",
+        title: "Lectica",
         description:
-        "Another project on the way",
-        tags: [],
-        githubUrl: "",
-        isEmpty: true,
+        "An AI-powered educational PWA that allows students to upload and share lecture materials, create flashcards and quizzes—as well as, gamifying the platform to include gameplay mechanics, multiplayer, ranking, and quests",
+        images: [
+            "/Screenshots/LecticaSC1.png",
+            "/Screenshots/LecticaSC2.png",
+            "/Screenshots/LecticaSC3.png",
+            "/Screenshots/LecticaSC4.png",
+            "/Screenshots/LecticaSC5.png",
+            "/Screenshots/LecticaSC6.png",
+            "/Screenshots/LecticaSC7.png",
+            "/Screenshots/LecticaSC8.png",
+            "/Screenshots/LecticaSC9.png",
+            "/Screenshots/LecticaSC10.png",
+            "/Screenshots/LecticaSC11.png",
+        ],
+        tags: ["Laravel", "Vue.js", "PHP", "PostgreSQL", "Tailwind CSS", "Git", "LLM"],
+        githubUrl: "https://github.com/kaatovi/Lectica",
+        isEmpty: false,
     },
     {
-        title: "Coming Soon",
+        title: "Work in Progress!",
         description:
         "Another project on the way",
         tags: [],
@@ -41,10 +55,12 @@ const TAG_COLORS: Record<string, string> = {
     "React": "#86efac",
     "Framer Motion": "#86efac",
     "Tailwind CSS": "#86efac",
+    "Vue.js": "#86efac",
 
     "Node.js": "#f87171",
     "Express": "#f87171",
     "Rest APIs": "#f87171",
+    "Laravel": "#f87171",
 
     "PostgreSQL": "#60a5fa",
     "MySQL": "#60a5fa",
@@ -60,6 +76,8 @@ const TAG_COLORS: Record<string, string> = {
     "Procreate": "#a78bfa",
 
     "GroqAPI": "#f9a8d4",
+    "LLM": "#f9a8d4",
+    
 }
 
 export default function Projects() {
@@ -141,7 +159,7 @@ export default function Projects() {
                         initial="enter"
                         animate="center"
                         exit="exit"
-                        transition={{duration: 0.5, ease: "easeIn"}}
+                        transition={{duration: 0.3, ease: "easeIn"}}
                         className={`rounded-2xl border p-4 flex flex-col gap-4 ${
                             project.isEmpty
                                 ?"backdrop-blur-lg border-white/50 bg-black/30 border-dashed min-h-70"
@@ -159,7 +177,7 @@ export default function Projects() {
                         ) : (
                             <>
                                 <div className="flex flex-col xl:flex-row gap-3">
-                                    <div className="w-auto h-auto xl:w-160 xl:h-80 rounded-xl overflow-hidden border border-white/10 shrink-0">
+                                    <div className="w-full h-48 sm:h-60 xl:w-160 xl:h-80 rounded-xl overflow-hidden border border-white/10 shrink-0">
                                         <AnimatePresence mode="wait">
                                         <motion.img
                                             key={hoveredImage ?? project.images?.[0] ?? ""}
@@ -173,7 +191,7 @@ export default function Projects() {
                                         />
                                         </AnimatePresence>
                                     </div>
-                                    <div className="flex flex-col gap-2 lg:gap-2 flex-1">
+                                    <div className="flex flex-col gap-2 lg:gap-2 flex-1 min-w-0">
                                         <h3 className="text-white font-semibold text-4xl lg:text-5xl mt-3">{project.title}</h3>
                                         <p className="text-white/60 text-sm leading-relaxed w-fit text-justify">
                                             {project.description}
@@ -181,10 +199,10 @@ export default function Projects() {
                                     
                                         {project.images &&  project.images.length > 0 && (
                                             <div 
-                                                className="relative overflow-hidden w-150"
+                                                className="relative overflow-hidden w-full"
                                                 style={{
-                                                    maskImage: "linear-gradient(to right, transparent, black 5%, black 90%, transparent)",
-                                                    WebkitMaskImage: "linear-gradient(to right, transparent, black 5%, black 90%, transparent)",
+                                                    maskImage: "linear-gradient(to right, transparent, black 15%, black 85%, transparent)",
+                                                    WebkitMaskImage: "linear-gradient(to right, transparent, black 15%, black 85%, transparent)",
                                                 }}
                                                 onMouseEnter={() => controls.stop()}
                                                 onMouseLeave={() => {
@@ -226,7 +244,7 @@ export default function Projects() {
                                                     >
                                                         {project.images.map((img, i) => (
                                                             <div 
-                                                                key={`a-${i}`} className={`w-60 h-35 rounded-lg overflow-hidden shrink-0 duration-300 transtition-all${
+                                                                key={`a-${i}`} className={`w-32 h-20 sm:w-44 sm:h-28 md:w-60 md:h-35 rounded-lg overflow-hidden shrink-0 duration-300 transtition-all${
                                                                     (hoveredImage ?? project.images[0]) === img
                                                                         ? "border-green-400/60 scale-105"
                                                                         : "border-white/10 opacity-60 hover:opacity-100"
@@ -239,7 +257,7 @@ export default function Projects() {
                                                         ))}
                                                         {project.images.map((img, i) => (
                                                             <div 
-                                                                key={`b-${i}`} className={`w-60 h-35 rounded-lg overflow-hidden shrink-0 duration-300 transition-all ${
+                                                                key={`b-${i}`} className={`w-32 h-20 sm:w-44 sm:h-28 md:w-60 md:h-35 rounded-lg overflow-hidden shrink-0 duration-300 transtition-all${
                                                                     (hoveredImage ?? project.images[0]) === img
                                                                         ? "scale-105"
                                                                         : "border-white/10 opacity-60 hover:opacity-100"
@@ -249,20 +267,7 @@ export default function Projects() {
                                                             >
                                                                 <img src={img} alt={`Screenshot ${i + 1}`} className="w-full h-full object-cover" />
                                                             </div>
-                                                        ))}
-                                                        {project.images.map((img, i) => (
-                                                            <div 
-                                                                key={`b-${i}`} className={`w-60 h-35 rounded-lg overflow-hidden shrink-0 duration-300 transition-all ${
-                                                                    (hoveredImage ?? project.images[0]) === img
-                                                                        ? "scale-105"
-                                                                        : "border-white/10 opacity-60 hover:opacity-100"
-                                                                }`}
-                                                                onMouseEnter={() => setHoveredImage(img)}
-                                                                onMouseLeave={() => setHoveredImage(null)}
-                                                            >
-                                                                <img src={img} alt={`Screenshot ${i + 1}`} className="w-full h-full object-cover" />
-                                                            </div>
-                                                        ))}
+                                                        ))}    
                                                     </motion.div>
                                             </div>
                                         )}
