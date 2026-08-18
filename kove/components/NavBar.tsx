@@ -25,7 +25,7 @@ export default function NavBar() {
             </div>
 
             <div className="hidden md:flex items-center gap-6 text-sm text-white/50 lg:px-10">
-                <a href="https://drive.google.com/file/d/1a9rhSStJh77P8v_6mDvFz5wvF2khCPnW/view?usp=sharing" 
+                <a href="https://drive.google.com/file/d/1wi3JZhwsCHT3lYUcxgA4lc0O9I6wIyFi/view?usp=sharing" 
                     target="_blank" 
                     rel="noopener noreferrer" 
                     className={linkClass}>
@@ -42,7 +42,7 @@ export default function NavBar() {
                 </a>
             </div>
             <div className={`md:hidden flex flex-col gap-5 py-2 px-2 transition-all duration-300 overflow-hidden ${open ? "max-h-screen opacity-100" : "max-h-0 opacity-0"}`}>
-                <a href="https://drive.google.com/file/d/1a9rhSStJh77P8v_6mDvFz5wvF2khCPnW/view?usp=sharing" 
+                <a href="https://drive.google.com/file/d/1wi3JZhwsCHT3lYUcxgA4lc0O9I6wIyFi/view?usp=sharing" 
                     target="_blank" 
                     rel="noopener noreferrer" 
                     className={linkClass}>
