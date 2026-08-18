@@ -30,7 +30,7 @@ export default function Contact() {
                 transition={{duration:0.5, delay:0.2}}
                 className="text-white/60 text-lg font-light leading-relaxed max-w-xl mb-10 text-justify"
             >
-                Open to full-time developer roles and freelance projects.
+                Open to part-time, or full-time developer roles and freelance projects.
                 Feel free to reach out or use the AI chat widget to ask me anything instantly.
             </motion.p>
            

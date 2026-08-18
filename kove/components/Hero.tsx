@@ -58,7 +58,7 @@ export default function Hero(){
                         initial={{opacity:0, y:20}}
                         whileInView={{opacity:1, y:0}}
                         transition={{duration:0.5, delay:0.1}}
-                        className="relative self-center order-first lg:order-last mb-2 w-48 h-48 sm:w-56 sm:h-56 md:w-72 md:h-72 lg:w-96 lg:h-96 rounded-full overflow-hidden group shrink-0">
+                        className="relative self-center order-first lg:order-last mb-2 w-48 h-48 sm:w-56 sm:h-56 md:w-72 md:h-72 lg:w-108 lg:h-108 rounded-full overflow-hidden group shrink-0">
                     
                         <Image 
                                 src="/Kurt.jpg" 

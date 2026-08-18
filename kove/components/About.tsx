@@ -54,8 +54,8 @@ const SKILLS = [
 
 export default function About() {
     return(
-        <section id="about" className="px-6 sm:px-14 lg:px-24 py-20 mt-25 border-t border-white/30 bg-black/50">
-            <div className="flex flex-row">
+        <section id="about" className="px-10 sm:px-14 lg:px-24 py-20 mt-25 border-t border-white/30 bg-black/50">
+            <div className="flex flex-col lg:flex-row">
                 <div className="flex flex-col">
                     <motion.p 
                         initial={{opacity:0, y:20}}
@@ -80,7 +80,7 @@ export default function About() {
                         whileInView={{opacity:1, y:0}}
                         
                         transition={{duration:0.7}}    
-                        className="text-white/60 text-sm md:text-lg font-light text-justify max-w-xl leading-relaxed mb-6"
+                        className="text-white/60 text-sm lg:mr-5 md:text-lg font-light text-justify max-w-xl leading-relaxed mb-6"
                     >
                         I&apos;m Kurt Valdecañas, an aspiring full-stack developer based in Bataan, Philippines.
                         I specialize in the PERN stack to build scalable products that solve personal and/or real problems, with strong focus on
@@ -91,46 +91,46 @@ export default function About() {
                     initial={{opacity:0, y:20}}
                     whileInView={{opacity:1, y:0}}
                     transition={{duration:0.8}}
-                    className="grid grid-cols-4 gap-3 px-10 mb-10 items-center"
+                    className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1 lg:gap-5 px-2 mb-7 lg:mb-10 items-center"
                 >
-                    <div className="flex flex-col gap-1 rounded-2xl bg-black/50 p-5 items-center">
-                        <h1 className="text-4xl font-bold text-white text-center">3</h1>
-                        <p className="text-md text-white/60 uppercase tracking-widest text-center">P<span className="text-xs text-white/40 text-center">rojects Done</span> </p>
+                    <div className="flex flex-col rounded-2xl bg-black/50 p-5 items-center">
+                        <h1 className="text-xl lg:text-4xl font-bold text-white text-center">3</h1>
+                        <p className="text-xs lg:text-md text-white/60 uppercase tracking-widest text-center">P<span className="text-xs text-white/40 text-center">rojects Done</span> </p>
                     </div>
 
-                    <div className="flex flex-col gap-1 rounded-2xl bg-black/50 p-5 items-center">
-                        <h1 className="text-4xl font-bold text-green-400 text-center">PWA</h1>
-                        <p className="text-md text-white/60 uppercase tracking-widest text-center">E<span className="text-xs text-white/40 text-center">xpertise</span></p>
+                    <div className="flex flex-col rounded-2xl bg-black/50 p-5 items-center">
+                        <h1 className="text-2xl lg:text-4xl font-bold text-green-400 text-center">PWA</h1>
+                        <p className="text-xs lg:text-md text-white/60 uppercase tracking-widest text-center">E<span className="text-xs text-white/40 text-center">xpertise</span></p>
                     </div>
 
-                    <div className="flex flex-col gap-1 rounded-2xl bg-black/50 p-5 items-center">
-                        <h1 className="text-lg font-semibold text-white text-center">Kove</h1>
-                        <p className="text-md text-white/60 uppercase tracking-widest text-center">R<span className="text-xs text-white/40 text-center">ecent Project</span></p>
+                    <div className="flex flex-col rounded-2xl bg-black/50 p-5 items-center">
+                        <h1 className="text-sm lg:text-lg font-semibold text-white text-center">Kove</h1>
+                        <p className="text-xs lg:text-md text-white/60 uppercase tracking-widest text-center">R<span className="text-xs text-white/40 text-center">ecent Project</span></p>
                     </div>  
 
-                    <div className="flex flex-col gap-1 rounded-2xl bg-black/50 p-5 items-center">
-                        <h1 className="text-lg font-semibold text-white/40 text-center">Finance App (TBD)</h1>
-                        <p className="text-md text-white/60 uppercase tracking-widest text-center">N<span className="text-xs text-white/40 text-center">ext Project</span></p>
+                    <div className="flex flex-col rounded-2xl bg-black/50 p-5 items-center">
+                        <h1 className="text-sm lg:text-lg font-semibold text-white text-center">Finance App (TBD)</h1>
+                        <p className="text-xs lg:text-md text-white/60 uppercase tracking-widest text-center">N<span className="text-xs text-white/40 text-center">ext Project</span></p>
                     </div>
 
-                    <div className="flex flex-col gap-1 rounded-2xl bg-black/50 p-5 items-center">
-                        <h1 className="text-lg font-semibold text-white text-center">{"< "}1 yr</h1>
-                        <p className="text-md text-white/60 uppercase tracking-widest text-center">P<span className="text-xs text-white/40 text-center">rofessional Experience</span></p>
+                    <div className="flex flex-col rounded-2xl bg-black/50 p-5 items-center">
+                        <h1 className="text-sm lg:text-lg font-semibold text-white text-center">{"< "}1 yr</h1>
+                        <p className="text-xs lg:text-md text-white/60 uppercase tracking-widest text-center">P<span className="text-xs text-white/40 text-center">rofessional Experience</span></p>
                     </div>
 
-                    <div className="flex flex-col gap-1 rounded-2xl bg-black/50 p-5 items-center">
-                        <h1 className="text-lg font-bold text-white text-center">Bachelor&apos;s Degree</h1>
-                        <p className="text-md text-white/60 uppercase tracking-widest text-center">E<span className="text-xs text-white/40 text-center">ducational Attainment</span></p>
+                    <div className="flex flex-col rounded-2xl bg-black/50 p-5 items-center">
+                        <h1 className="text-sm lg:text-lg font-bold text-white text-center">Bachelor&apos;s Degree</h1>
+                        <p className="text-xs lg:text-md text-white/60 uppercase tracking-widest text-center">E<span className="text-xs text-white/40 text-center">ducational Attainment</span></p>
                     </div>
 
-                    <div className="flex flex-col gap-1 rounded-2xl bg-black/50 p-5 items-center">
-                        <h1 className="text-lg font-semibold text-white text-center">Developer | System Analyst</h1>
-                        <p className="text-md text-white/60 uppercase tracking-widest text-center">R<span className="text-xs text-white/40 text-center">ecent Experience</span></p>
+                    <div className="flex flex-col rounded-2xl bg-black/50 p-5 items-center">
+                        <h1 className="text-sm lg:text-lg font-semibold text-white text-center">Developer | System Analyst</h1>
+                        <p className="text-xs lg:text-md text-white/60 uppercase tracking-widest text-center">R<span className="text-xs text-white/40 text-center">ecent Experience</span></p>
                     </div>
 
-                    <div className="flex flex-col gap-1 rounded-2xl bg-black/50 p-5 items-center">
-                        <h1 className="text-lg font-semibold text-white text-center">IT & Developer Roles</h1>
-                        <p className="text-md text-white/60 uppercase tracking-widest text-center">N<span className="text-xs text-white/40 text-center">ext Goal</span></p>
+                    <div className="flex flex-col rounded-2xl bg-black/50 p-5 items-center">
+                        <h1 className="text-sm lg:text-lg font-semibold text-white text-center">IT & Developer Roles</h1>
+                        <p className="text-xs lg:text-md text-white/60 uppercase tracking-widest text-center">N<span className="text-xs text-white/40 text-center">ext Goal</span></p>
                     </div>
                 </motion.div>
             </div>
@@ -148,11 +148,11 @@ export default function About() {
                         whileInView={{opacity: 1, y:0}}
 
                         transition={{duration: 0.2, delay: i * 0.05}}
-                        className="relative overflow-hidden -mx-6 sm:-mx-14 lg:-mx-24 transition-transform duration-300 ease-in-out border-y border-transparent bg-black/50 p-6 group"
+                        className="relative overflow-hidden -mx-10 sm:-mx-14 lg:-mx-24 transition-transform duration-300 ease-in-out border-y border-transparent bg-black/50 p-6 group"
                     >
-                        <span className="relative z-10 flex flex-row">
+                        <span className="z-10 flex lg:flex-row">
                             <div className="flex flex-row gap-2 w-full items-center justify-center">
-                                <p className="text-2xl font-light tracking-widest lowercase my-1 mr-10"
+                                <p className="text-sm sm:text-lg lg:text-2xl font-light tracking-widest lowercase my-1 mr-5 lg:mr-10"
                                     style={{color: group.color}}
                                 >
                                     {group.label}
@@ -160,14 +160,14 @@ export default function About() {
                                 {group.items.map((skill) => (
                                     <span
                                         key={skill.name}
-                                        className="text-sm px-3 font-extralight"
+                                        className="text-[8px] sm:text-[10px] lg:text-sm px-3 font-extralight"
                                     >
                                         <Image 
                                             src={skill.icon}
                                             alt={skill.name}
-                                            width={34}
-                                            height={34}
-                                            className="inline-block mr-2 invert" 
+                                            width={30}
+                                            height={30}
+                                            className="inline-block mr-2 mb-2 invert" 
                                         />
                                     {skill.name}
                                     </span>
