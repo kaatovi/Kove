@@ -148,7 +148,7 @@ export default function About() {
                         whileInView={{opacity: 1, y:0}}
 
                         transition={{duration: 0.2, delay: i * 0.05}}
-                        className="relative overflow-hidden -mx-23.5 transition-transform duration-300 ease-in-out border-y border-transparent bg-black/50 p-6 group"
+                        className="relative overflow-hidden -mx-6 sm:-mx-14 lg:-mx-24 transition-transform duration-300 ease-in-out border-y border-transparent bg-black/50 p-6 group"
                     >
                         <span className="relative z-10 flex flex-row">
                             <div className="flex flex-row gap-2 w-full items-center justify-center">
