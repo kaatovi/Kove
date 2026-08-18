@@ -10,9 +10,9 @@ const PROJECTS = [
         description:
         "An animated Next.js portfolio with a Groq (Llama 3.3) chat widget specifically trained on Kurt's stack and experiences",
         images: [
-            "/Screenshots/Hero.png",
-            "/Screenshots/Hero.png",
-            "/Screenshots/Hero.png",
+            "/Screenshots/FixedKoveSC1.png",
+            "/Screenshots/FixedKoveSC2.png",
+            "/Screenshots/FixedKoveSC3.png",
             "/Screenshots/KoveSC4.png",
         ],
         tags: ["Next.js", "Framer Motion", "GroqAPI", "TypeScript", "Tailwind CSS", "Git"],
