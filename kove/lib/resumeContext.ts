@@ -1,4 +1,3 @@
-import { p } from "framer-motion/client";
 import resume from "./resume.json";
 
 export const RESUME_CONTEXT = `

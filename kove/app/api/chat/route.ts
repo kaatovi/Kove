@@ -9,13 +9,14 @@ export async function POST(req: Request){
     try{
         const {messages} = await req.json();
         const stream = await groq.chat.completions.create({
-            model: "llama-3.3-70b-versatile",
+            model: "qwen/qwen3.6-27b",
             stream: true,
             max_tokens: 300,
             messages: [
                 {role: "system", content: RESUME_CONTEXT},
                 ...messages,
             ],
+            reasoning_effort: "none",
         });
 
         const encoder = new TextEncoder();
