@@ -3,8 +3,17 @@
 import { motion } from "framer-motion";
 import TextType from "@/components/TextType";
 import Image from "next/image";
+import { useState, useEffect } from "react";
 
 export default function Hero(){
+
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        const timer = setTimeout(() => setMounted(true), 0);
+        return () => clearTimeout(timer);
+    }, []);
+
     return (
         <section>
             <div className="flex flex-col justify-center px-10 sm:px-14 lg:px-20 z-10 min-h-screen">
@@ -16,17 +25,22 @@ export default function Hero(){
                             whileInView={{opacity:1, y:0}}
                             transition={{duration:0.5, delay:0.1}}
                             className="text-4xl sm:text-5xl md:text-7xl font-bold text-white leading-tight"
-                            > Hi, I&apos;m <span className="text-transparent bg-clip-text bg-linear-to-r from-green-300 to-yellow-300">
-                                <TextType 
-                                    text={["Kurt.", "kaatov.", "kurval."]}
-                                    typingSpeed={150}
-                                    pauseDuration={1500}
-                                    showCursor
-                                    cursorCharacter="| "
-                                    cursorClassName="text-green-300"
-                                    deletingSpeed={150}
-                                    cursorBlinkDuration={.8}    
-                                />
+                            > Hi, I&apos;m{" "}
+                            <span className="text-transparent bg-clip-text bg-linear-to-r from-green-300 to-yellow-300">
+                                {mounted ? (
+                                    <TextType 
+                                        text={["Kurt.", "kaatov.", "kurval."]}
+                                        typingSpeed={150}
+                                        pauseDuration={1500}
+                                        showCursor
+                                        cursorCharacter="| "
+                                        cursorClassName="text-green-300"
+                                        deletingSpeed={150}
+                                        cursorBlinkDuration={.8}    
+                                    />
+                                ) : (
+                                    <span className="text-transparent bg-clip-text bg-linear-to-r from-green-300 to-yellow-300">Kurt.</span>
+                                )}
                             </span>
                         </motion.div>
 
