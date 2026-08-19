@@ -39,7 +39,7 @@ export default function Hero(){
                                         cursorBlinkDuration={.8}    
                                     />
                                 ) : (
-                                    <span className="text-transparent bg-clip-text bg-linear-to-r from-green-300 to-yellow-300">Kurt.</span>
+                                    <span className="bg-linear-to-r from-green-300 to-yellow-300">Kurt.</span>
                                 )}
                             </span>
                         </motion.div>
