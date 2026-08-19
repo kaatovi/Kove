@@ -22,7 +22,7 @@ export default function Hero(){
                     <div className="flex flex-col items-center justify-center text-center lg:items-start lg:justify-start lg:text-start order-last lg:order-first">
                         <motion.div
                             initial={{opacity:0, y:20}}
-                            whileInView={{opacity:1, y:0}}
+                            animate={{opacity:1, y:0}}
                             transition={{duration:0.5, delay:0.1}}
                             className="text-4xl sm:text-5xl md:text-7xl font-bold text-white leading-tight"
                             > Hi, I&apos;m{" "}
@@ -39,7 +39,7 @@ export default function Hero(){
                                         cursorBlinkDuration={.8}    
                                     />
                                 ) : (
-                                    <span className="bg-linear-to-r from-green-300 to-yellow-300">Kurt.</span>
+                                    <span className="bg-gradient-to-r from-green-300 to-yellow-300">Kurt.</span>
                                 )}
                             </span>
                         </motion.div>
