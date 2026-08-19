@@ -177,7 +177,7 @@ export default function Projects() {
                         ) : (
                             <>
                                 <div className="flex flex-col xl:flex-row gap-3">
-                                    <div className="w-full h-48 sm:h-60 xl:w-160 xl:h-80 rounded-xl overflow-hidden border border-white/10 shrink-0">
+                                    <div className="w-full h-full xl:w-160 xl:h-80 rounded-xl overflow-hidden border border-white/10 shrink-0">
                                         <AnimatePresence mode="wait">
                                         <motion.img
                                             key={hoveredImage ?? project.images?.[0] ?? ""}
