@@ -192,7 +192,19 @@ export default function Projects() {
                                         </AnimatePresence>
                                     </div>
                                     <div className="flex flex-col gap-2 lg:gap-2 flex-1 min-w-0">
-                                        <h3 className="text-white font-semibold text-4xl lg:text-5xl mt-3">{project.title}</h3>
+                                        <div className="flex flex-row items-center gap-2">
+                                            <h3 className="text-white font-semibold text-4xl lg:text-5xl mt-3">{project.title}</h3>
+                                            {project.title === "Lectica" && (                                            
+                                                <a href="https://drive.google.com/file/d/14zxUhrOAB-tIEViD-kvCV_eNKz-ok30t/view"
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="relative text-[12px] lowercase tracking-widest text-white transition-colors pb-1 after:absolute after:bottom-0 after:left-0 after:h-[1.5px] after:w-full after:bg-green-400 after:scale-x-30 after:origin-left hover:after:scale-x-100 after:transition-transform after:duration-300"
+                                                    aria-label="Watch Demo"
+                                                    >
+                                                    Watch Demo<span className="text-green-400">.</span>                                                    
+                                                </a>
+                                            )}
+                                        </div>
                                         <p className="text-white/60 text-sm leading-relaxed w-fit text-justify">
                                             {project.description}
                                         </p>
@@ -283,7 +295,7 @@ export default function Projects() {
                                                     </span>
                                                 ))}
                                             </div>
-
+                                                                                
                                             {project.githubUrl && (
                                                 <a href={project.githubUrl}
                                                     target="_blank"

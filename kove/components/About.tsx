@@ -94,12 +94,12 @@ export default function About() {
                     className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1 lg:gap-5 px-2 mb-7 lg:mb-10 items-center"
                 >
                     <div className="flex flex-col rounded-2xl bg-black/50 p-5 items-center">
-                        <h1 className="text-xl lg:text-4xl font-bold text-white text-center">3</h1>
-                        <p className="text-xs lg:text-md text-white/60 uppercase tracking-widest text-center">P<span className="text-xs text-white/40 text-center">rojects Done</span> </p>
+                        <h1 className="text-xl lg:text-4xl font-bold text-white text-center">2+</h1>
+                        <p className="text-xs lg:text-md text-white/60 uppercase tracking-widest text-center">P<span className="text-xs text-white/40 text-center">rojects Built</span> </p>
                     </div>
 
                     <div className="flex flex-col rounded-2xl bg-black/50 p-5 items-center">
-                        <h1 className="text-2xl lg:text-4xl font-bold text-green-400 text-center">PWA</h1>
+                        <h1 className="text-xl lg:text-2xl font-bold text-green-400 text-center">Web Apps</h1>
                         <p className="text-xs lg:text-md text-white/60 uppercase tracking-widest text-center">E<span className="text-xs text-white/40 text-center">xpertise</span></p>
                     </div>
 
